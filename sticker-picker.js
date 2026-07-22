@@ -33,6 +33,13 @@
     return raw === 'it' ? 'it' : 'en';
   }
 
+  // Panel growth, phase 1: 3 columns up to 12 grid tiles (11 stickers plus
+  // the add tile); 4 columns from the 13th tile on. Phase 2 (height up to
+  // ~92vh before scrolling) lives in the CSS block below.
+  function columnsFor(tileCount) {
+    return tileCount >= 13 ? 4 : 3;
+  }
+
   const I18N = {
     en: {
       title: 'Stickers',
@@ -81,7 +88,7 @@
   // ── Node export guard: under `node --test` export the pure helpers and
   //    stop before touching any DOM. In the browser `module` is undefined. ──
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { chatMessageFor, pickLang, I18N, loadCustom, saveCustom, builtinStickers, STORAGE_KEY };
+    module.exports = { chatMessageFor, pickLang, columnsFor, I18N, loadCustom, saveCustom, builtinStickers, STORAGE_KEY };
     return;
   }
 
@@ -120,9 +127,11 @@
   const style = document.createElement('style');
   style.textContent = [
     '#' + PANEL_ID + ' { position: fixed; right: 16px; bottom: 64px; z-index: 100000;',
-    '  width: 340px; max-height: 60vh; overflow-y: auto; background: #1e1f24; color: #eee;',
+    '  width: 340px; max-width: 90vw; max-height: 92vh; overflow-y: auto; background: #1e1f24; color: #eee;',
     '  border: 1px solid #444; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,.5);',
     '  font: 13px/1.3 sans-serif; padding: 10px; }',
+    '#' + PANEL_ID + '.sp-wide { width: 448px; }',
+    '#' + PANEL_ID + '.sp-wide .sp-grid { grid-template-columns: repeat(4, 1fr); }',
     '#' + PANEL_ID + ' .sp-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }',
     '#' + PANEL_ID + ' .sp-title { font-weight: 700; font-size: 14px; }',
     '#' + PANEL_ID + ' .sp-close { cursor: pointer; border: 0; background: none; color: #aaa; font-size: 16px; }',
@@ -199,6 +208,7 @@
       renderGrid();
     });
     grid.appendChild(add);
+    panel.classList.toggle('sp-wide', columnsFor(grid.children.length) === 4);
   }
 
   function buildPanel() {

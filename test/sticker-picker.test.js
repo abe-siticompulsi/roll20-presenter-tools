@@ -1,7 +1,7 @@
 const { test } = require('node:test');
 const assert = require('node:assert');
 const {
-  chatMessageFor, pickLang, loadCustom, saveCustom, builtinStickers, STORAGE_KEY,
+  chatMessageFor, pickLang, columnsFor, loadCustom, saveCustom, builtinStickers, STORAGE_KEY,
 } = require('../sticker-picker.js');
 
 function fakeStorage(initial = {}) {
@@ -73,4 +73,11 @@ test('builtinStickers picks the example for the language', () => {
   assert.strictEqual(builtinStickers('it')[0].name, 'Giocare spietato');
   assert.ok(builtinStickers('it')[0].url.endsWith('/assets/stickers/example-it.png'));
   assert.strictEqual(builtinStickers('en')[0].builtin, true);
+});
+
+test('columnsFor switches to 4 columns from the 13th tile (12 stickers + add tile)', () => {
+  assert.strictEqual(columnsFor(1), 3);
+  assert.strictEqual(columnsFor(12), 3);
+  assert.strictEqual(columnsFor(13), 4);
+  assert.strictEqual(columnsFor(40), 4);
 });
