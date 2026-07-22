@@ -1,0 +1,23 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Sticker picker fixture</title>
+<style>
+  body { font: 14px sans-serif; background: #333; color: #eee; padding: 1rem; }
+  #textchat-input { position: fixed; bottom: 0; left: 0; right: 0; background: #222; padding: 8px; }
+  textarea { width: 60%; } #sent { white-space: pre-wrap; color: #8f8; }
+</style>
+<h1>Fake Roll20 chat</h1>
+<p>Messages "sent":</p>
+<div id="sent"></div>
+<div id="textchat-input">
+  <textarea placeholder="chat draft"></textarea>
+  <button id="chatSendBtn">Send</button>
+</div>
+<script>
+  document.getElementById('chatSendBtn').addEventListener('click', function () {
+    const ta = document.querySelector('#textchat-input textarea');
+    document.getElementById('sent').textContent += ta.value + '\n';
+  });
+</script>
+<script>window.__r20spLang = new URLSearchParams(location.search).get('lang') || undefined;</script>
+<script src="../sticker-picker.js"></script>
