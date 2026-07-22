@@ -531,7 +531,7 @@
         console.log('[Roll20 Custom UI] Overlay paused.');
       }
 
-      // Cmd + Ctrl + L → Clear (hides and empties the overlay)
+      // Cmd + Ctrl + O → Clear (hides and empties the overlay)
       if (e.metaKey && e.ctrlKey && e.key === 'o') {
         e.preventDefault();
         [...liveStickers].forEach(s => dismissSticker(s, true));  // stickers first (re-arms the timers)…
