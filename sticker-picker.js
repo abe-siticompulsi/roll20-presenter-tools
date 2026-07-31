@@ -214,9 +214,10 @@
     '#' + PANEL_ID + '.sp-wide .sp-grid { grid-template-columns: repeat(4, 1fr); }',
     '#' + PANEL_ID + ' .sp-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }',
     '#' + PANEL_ID + ' .sp-title { font-weight: 700; font-size: 14px; }',
-    '#' + PANEL_ID + ' .sp-close { cursor: pointer; border: 0; background: none; color: #aaa; font-size: 16px; }',
-    '#' + PANEL_ID + ' .sp-tool { cursor: pointer; border: 0; background: none; color: #aaa; font-size: 14px; padding: 0 3px; }',
-    '#' + PANEL_ID + ' .sp-tool:hover:not(:disabled) { color: #fff; }',
+    '#' + PANEL_ID + ' .sp-close { cursor: pointer; border: 0; background: none; color: #aaa; font-size: 16px; margin-left: 10px; }',
+    '#' + PANEL_ID + ' .sp-tool { cursor: pointer; border: 1px solid #3a3b42; background: #2a2b31; color: #ddd;',
+    '  font-size: 14px; line-height: 1; padding: 4px 9px; border-radius: 6px; margin-right: 6px; }',
+    '#' + PANEL_ID + ' .sp-tool:hover:not(:disabled) { border-color: #7c5cff; }',
     '#' + PANEL_ID + ' .sp-tool:disabled { opacity: .35; cursor: default; }',
     '#' + PANEL_ID + ' .sp-feedback { color: #9c9; font-size: 11px; margin-left: auto; margin-right: 6px; }',
     '#' + PANEL_ID + ' .sp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }',
@@ -355,7 +356,7 @@
     feedbackEl = feedback;
     exportBtn = document.createElement('button');
     exportBtn.className = 'sp-tool sp-export';
-    exportBtn.textContent = '⬇';
+    exportBtn.textContent = '📤';
     exportBtn.title = t.exportTip;
     exportBtn.addEventListener('click', function () {
       const blob = new Blob([JSON.stringify(exportPayload(customList), null, 2)], { type: 'application/json' });
@@ -367,7 +368,7 @@
     });
     const importBtn = document.createElement('button');
     importBtn.className = 'sp-tool sp-import';
-    importBtn.textContent = '⬆';
+    importBtn.textContent = '📥';
     importBtn.title = t.importTip;
     const fileInput = document.createElement('input');
     fileInput.type = 'file';
