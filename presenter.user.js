@@ -7,6 +7,7 @@
 // @version     1.4
 // @author      abe
 // @require     https://cdn.jsdelivr.net/npm/obs-websocket-js@5/dist/obs-ws.min.js
+// @require     https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie_light.min.js
 // @description Roll20 interface tweaks for the presenter side (the person recording the video) to improve the viewer's experience
 // ==/UserScript==
 
@@ -136,6 +137,7 @@
       position: relative;
       transition: max-width 0.6s ease, max-height 0.6s ease;
     }
+    .r20-sticker .r20-lottie svg { display: block; }
     /* PNG & co. (transparency): glow that follows the outline */
     .r20-sticker.png img {
       filter: drop-shadow(0 0 16px rgba(255,255,255,0.35)) drop-shadow(0 16px 28px rgba(0,0,0,0.55));
@@ -453,8 +455,16 @@
       liveStickers.forEach((s, i) => {
         const slotW = (vw / n) * STK.widthFrac;
         const maxH = vh * STK.heightFrac;
-        s.img.style.maxWidth = Math.min(slotW, (s.nw || slotW) * STK.maxUpscale) + 'px';
-        s.img.style.maxHeight = Math.min(maxH, (s.nh || maxH) * STK.maxUpscale) + 'px';
+        if (s.vector) {
+          // Vector stickers have no upscale limit: fill the slot, keep ratio.
+          const ratio = s.nw / s.nh;
+          const w = Math.min(slotW, maxH * ratio);
+          s.img.style.width = w + 'px';
+          s.img.style.height = (w / ratio) + 'px';
+        } else {
+          s.img.style.maxWidth = Math.min(slotW, (s.nw || slotW) * STK.maxUpscale) + 'px';
+          s.img.style.maxHeight = Math.min(maxH, (s.nh || maxH) * STK.maxUpscale) + 'px';
+        }
         s.holder.style.left = (vw * (i + 1) / (n + 1)) + 'px';
         // with multiple stickers, slight alternating vertical offset ("collage" effect)
         s.holder.style.top = (vh * (n > 1 ? 0.5 + (i % 2 ? 0.04 : -0.04) : 0.5)) + 'px';
@@ -468,7 +478,10 @@
       const i = liveStickers.indexOf(entry);
       if (i >= 0) liveStickers.splice(i, 1);
       entry.holder.classList.add('out-' + pickAnim(ANIM_OUT, STK.animOut));
-      setTimeout(() => entry.holder.remove(), fast ? 250 : 700);
+      setTimeout(() => {
+        if (entry.player) { entry.player.destroy(); entry.player = null; }
+        entry.holder.remove();
+      }, fast ? 250 : 700);
       relayoutStickers();                          // the others redistribute
       if (!liveStickers.length) {
         exitStickerScene();
@@ -476,7 +489,63 @@
       }
     }
 
+    // Animated stickers: "<base>.lottie.png" in chat means a Lottie JSON
+    // lives next to it as "<base>.lottie.json" (same rule as the picker).
+    function lottieJsonUrlFor(url) {
+      const m = url.match(/^([^?#]*)\.lottie\.png([?#].*)?$/i);
+      return m ? m[1] + '.lottie.json' + (m[2] || '') : null;
+    }
+
     function showSticker(src) {
+      const jsonUrl = lottieJsonUrlFor(src);
+      if (jsonUrl) showLottieSticker(src, jsonUrl); else showImageSticker(src);
+    }
+
+    // Fetches the Lottie JSON (its host must send open CORS). Any failure
+    // falls back to the static PNG — the same thing the players see in chat.
+    function showLottieSticker(src, jsonUrl) {
+      fetch(jsonUrl)
+        .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .then(data => mountLottieSticker(data))
+        .catch(err => {
+          console.warn('[Roll20 Custom UI] Lottie unavailable (' + err.message + '), showing the static preview.');
+          showImageSticker(src);
+        });
+    }
+
+    function mountLottieSticker(data) {
+      const holder = document.createElement('div');
+      holder.className = 'r20-sticker png in-' + pickAnim(ANIM_IN, STK.animIn);
+      const rot = (Math.random() * 2 - 1) * 7;
+      holder.style.setProperty('--stk-rot', rot.toFixed(1) + 'deg');
+      const pop = document.createElement('div');
+      pop.className = 'r20-sticker-pop';
+      const burst = document.createElement('div');
+      burst.className = 'r20-sticker-burst';
+      pop.appendChild(burst);
+      const box = document.createElement('div');
+      box.className = 'r20-lottie';
+      const entry = { holder, img: box, tOut: null, dead: false, vector: true, nw: data.w || 512, nh: data.h || 512, player: null };
+      while (liveStickers.length >= STK.maxConcurrent) dismissSticker(liveStickers[0], true);
+      enterStickerScene();
+      const vw = window.innerWidth, vh = window.innerHeight;
+      const ratio = entry.nw / entry.nh;
+      const w = Math.min(vw * STK.widthFrac, vh * STK.heightFrac * ratio);
+      box.style.width = w + 'px';
+      box.style.height = (w / ratio) + 'px';
+      holder.style.left = (vw / 2) + 'px';
+      holder.style.top = (vh / 2) + 'px';
+      pop.appendChild(box);
+      holder.appendChild(pop);
+      document.body.appendChild(holder);
+      liveStickers.push(entry);
+      armOverlayTimers();
+      setTimeout(relayoutStickers, 700);
+      if (!pause) entry.tOut = setTimeout(() => dismissSticker(entry), STK.durationMs);
+      entry.player = lottie.loadAnimation({ container: box, renderer: 'svg', loop: true, autoplay: true, animationData: data });
+    }
+
+    function showImageSticker(src) {
       const sticker = isStickerish(src);
       const holder = document.createElement('div');
       holder.className = 'r20-sticker ' + (sticker ? 'png' : 'photo') + ' in-' + pickAnim(ANIM_IN, STK.animIn);
@@ -526,6 +595,7 @@
         if (fadeTimer) { clearTimeout(fadeTimer); fadeTimer = null; }
         if (truncateTimer) { clearTimeout(truncateTimer); truncateTimer = null; }
         liveStickers.forEach(s => clearTimeout(s.tOut));   // also freezes the stickers
+        liveStickers.forEach(s => { if (s.player) s.player.pause(); });
         overlay.style.opacity = '1';
         pause = true;
         console.log('[Roll20 Custom UI] Overlay paused.');
