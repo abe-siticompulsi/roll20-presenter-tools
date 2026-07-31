@@ -180,6 +180,21 @@
     return ta && btn ? { ta, btn } : null;
   }
 
+  // lottie-web is loaded lazily (first hover on an animated tile) with the
+  // same fetch+eval trick as the picker itself — Roll20's CSP blocks external
+  // <script src> but allows fetch (jsDelivr sends open CORS) and eval.
+  const LOTTIE_SRC = 'https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie_light.min.js';
+  let lottiePromise = null;
+  function ensureLottie() {
+    if (window.lottie) return Promise.resolve(window.lottie);
+    if (!lottiePromise) {
+      lottiePromise = fetch(LOTTIE_SRC)
+        .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+        .then(function (code) { (0, eval)(code); return window.lottie; });
+    }
+    return lottiePromise;
+  }
+
   function sendSticker(sticker) {
     const chat = findChat();
     if (!chat) { alert(t.chatNotFound); return; }
@@ -214,6 +229,9 @@
     '#' + PANEL_ID + ' .sp-remove { position: absolute; top: 2px; right: 2px; border: 0; border-radius: 50%;',
     '  width: 18px; height: 18px; line-height: 16px; background: #000a; color: #ccc; cursor: pointer; font-size: 11px; }',
     '#' + PANEL_ID + ' .sp-add { font-size: 26px; color: #9a9; border-style: dashed; }',
+    '#' + PANEL_ID + ' .sp-anim-badge { position: absolute; bottom: 2px; right: 4px; color: #cdc; font-size: 10px; text-shadow: 0 0 3px #000; pointer-events: none; }',
+    '#' + PANEL_ID + ' .sp-anim-box { position: absolute; inset: 4%; pointer-events: none; }',
+    '#' + PANEL_ID + ' .sp-anim-box svg { display: block; }',
     '#' + LAUNCHER_ID + ' { cursor: pointer; border: 0; background: none; font-size: 18px;',
     '  vertical-align: middle; margin-left: 4px; }',
   ].join('\n');
@@ -253,6 +271,38 @@
         renderGrid();
       });
       tile.appendChild(removeBtn);
+    }
+    const animJsonUrl = lottieJsonUrlFor(sticker.url);
+    if (animJsonUrl) {
+      const badge = document.createElement('span');
+      badge.className = 'sp-anim-badge';
+      badge.textContent = '▶';
+      badge.title = t.animTip;
+      tile.appendChild(badge);
+      let hovering = false, hoverPlayer = null, hoverBox = null;
+      tile.addEventListener('mouseenter', function () {
+        hovering = true;
+        const dataP = sticker._animText
+          ? Promise.resolve(sticker._animText)
+          : fetch(animJsonUrl)
+              .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+              .then(function (txt) { sticker._animText = txt; return txt; });
+        Promise.all([ensureLottie(), dataP]).then(function (res) {
+          if (!hovering || hoverPlayer) return;
+          hoverBox = document.createElement('div');
+          hoverBox.className = 'sp-anim-box';
+          tile.appendChild(hoverBox);
+          img.style.visibility = 'hidden';
+          // fresh parse per hover: lottie mutates the data object it is given
+          hoverPlayer = res[0].loadAnimation({ container: hoverBox, renderer: 'svg', loop: true, autoplay: true, animationData: JSON.parse(res[1]) });
+        }).catch(function () { /* player or JSON unavailable: keep the static preview */ });
+      });
+      tile.addEventListener('mouseleave', function () {
+        hovering = false;
+        if (hoverPlayer) { hoverPlayer.destroy(); hoverPlayer = null; }
+        if (hoverBox) { hoverBox.remove(); hoverBox = null; }
+        img.style.visibility = '';
+      });
     }
     tile.addEventListener('click', function (ev) {
       sendSticker(sticker);
