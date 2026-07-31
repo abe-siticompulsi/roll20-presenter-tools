@@ -137,6 +137,7 @@
       position: relative;
       transition: max-width 0.6s ease, max-height 0.6s ease;
     }
+    .r20-sticker .r20-lottie { transition: width 0.6s ease, height 0.6s ease; }
     .r20-sticker .r20-lottie svg { display: block; }
     /* PNG & co. (transparency): glow that follows the outline */
     .r20-sticker.png img {
@@ -506,14 +507,15 @@
     function showLottieSticker(src, jsonUrl) {
       fetch(jsonUrl)
         .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-        .then(data => mountLottieSticker(data))
+        .then(data => mountLottieSticker(src, data))
         .catch(err => {
           console.warn('[Roll20 Custom UI] Lottie unavailable (' + err.message + '), showing the static preview.');
           showImageSticker(src);
         });
     }
 
-    function mountLottieSticker(data) {
+    function mountLottieSticker(src, data) {
+      if (typeof lottie === 'undefined') throw new Error('lottie-web not loaded');
       const holder = document.createElement('div');
       holder.className = 'r20-sticker png in-' + pickAnim(ANIM_IN, STK.animIn);
       const rot = (Math.random() * 2 - 1) * 7;
@@ -542,7 +544,13 @@
       armOverlayTimers();
       setTimeout(relayoutStickers, 700);
       if (!pause) entry.tOut = setTimeout(() => dismissSticker(entry), STK.durationMs);
-      entry.player = lottie.loadAnimation({ container: box, renderer: 'svg', loop: true, autoplay: true, animationData: data });
+      try {
+        entry.player = lottie.loadAnimation({ container: box, renderer: 'svg', loop: true, autoplay: true, animationData: data });
+      } catch (e) {
+        dismissSticker(entry, true);   // unmount the ghost before falling back
+        throw e;
+      }
+      if (pause) entry.player.pause();
     }
 
     function showImageSticker(src) {
