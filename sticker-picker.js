@@ -200,6 +200,10 @@
     '#' + PANEL_ID + ' .sp-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }',
     '#' + PANEL_ID + ' .sp-title { font-weight: 700; font-size: 14px; }',
     '#' + PANEL_ID + ' .sp-close { cursor: pointer; border: 0; background: none; color: #aaa; font-size: 16px; }',
+    '#' + PANEL_ID + ' .sp-tool { cursor: pointer; border: 0; background: none; color: #aaa; font-size: 14px; padding: 0 3px; }',
+    '#' + PANEL_ID + ' .sp-tool:hover:not(:disabled) { color: #fff; }',
+    '#' + PANEL_ID + ' .sp-tool:disabled { opacity: .35; cursor: default; }',
+    '#' + PANEL_ID + ' .sp-feedback { color: #9c9; font-size: 11px; margin-left: auto; margin-right: 6px; }',
     '#' + PANEL_ID + ' .sp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }',
     '#' + PANEL_ID + ' .sp-tile { position: relative; background: #2a2b31; border: 1px solid #3a3b42;',
     '  border-radius: 8px; cursor: pointer; aspect-ratio: 1; display: flex; align-items: center;',
@@ -216,6 +220,8 @@
 
   let customList = loadCustom(window.localStorage);
   let panel = null;
+  let exportBtn = null;
+  let feedbackEl = null;
 
   function buildTile(sticker, isCustom) {
     const tile = document.createElement('div');
@@ -265,7 +271,7 @@
     add.textContent = '+';
     add.title = t.addTile;
     add.addEventListener('click', function () {
-      const url = (window.prompt(t.promptUrl) || '').trim();
+      const url = normalizeStickerUrl((window.prompt(t.promptUrl) || '').trim());
       if (!url) return;
       const name = (window.prompt(t.promptName) || '').trim() || 'sticker';
       customList.push({ name: name, url: url });
@@ -274,6 +280,7 @@
     });
     grid.appendChild(add);
     panel.classList.toggle('sp-wide', columnsFor(grid.children.length) === 4);
+    if (exportBtn) exportBtn.disabled = customList.length === 0;
   }
 
   function buildPanel() {
@@ -288,8 +295,48 @@
     close.className = 'sp-close';
     close.textContent = '✕';
     close.addEventListener('click', closePanel);
+    const feedback = document.createElement('span');
+    feedback.className = 'sp-feedback';
+    feedbackEl = feedback;
+    exportBtn = document.createElement('button');
+    exportBtn.className = 'sp-tool sp-export';
+    exportBtn.textContent = '⬇';
+    exportBtn.title = t.exportTip;
+    exportBtn.addEventListener('click', function () {
+      const blob = new Blob([JSON.stringify(exportPayload(customList), null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'sticker-collection.json';
+      a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+    });
+    const importBtn = document.createElement('button');
+    importBtn.className = 'sp-tool sp-import';
+    importBtn.textContent = '⬆';
+    importBtn.title = t.importTip;
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = '.json,application/json';
+    fileInput.style.display = 'none';
+    importBtn.addEventListener('click', function () { fileInput.value = ''; fileInput.click(); });
+    fileInput.addEventListener('change', function () {
+      const f = fileInput.files && fileInput.files[0];
+      if (!f) return;
+      f.text().then(function (text) {
+        const res = parseImport(text, builtinStickers(lang).concat(customList));
+        if (res.error) { setFeedback(res.error === 'version' ? t.importVersion : t.importInvalid); return; }
+        customList = customList.concat(res.added);
+        saveCustom(window.localStorage, customList);
+        renderGrid();
+        setFeedback(t.importResult.replace('{added}', res.added.length).replace('{skipped}', res.skipped));
+      });
+    });
     head.appendChild(title);
+    head.appendChild(feedback);
+    head.appendChild(exportBtn);
+    head.appendChild(importBtn);
     head.appendChild(close);
+    panel.appendChild(fileInput);
     panel.appendChild(head);
     const grid = document.createElement('div');
     grid.className = 'sp-grid';
@@ -301,6 +348,13 @@
 
   function openPanel() { panel.style.display = 'block'; }
   function closePanel() { panel.style.display = 'none'; }
+  let feedbackTimer = null;
+  function setFeedback(msg) {
+    if (!feedbackEl) return;
+    feedbackEl.textContent = msg;
+    clearTimeout(feedbackTimer);
+    feedbackTimer = setTimeout(function () { feedbackEl.textContent = ''; }, 4000);
+  }
   function togglePanel() {
     if (panel.style.display === 'none') openPanel(); else closePanel();
   }
