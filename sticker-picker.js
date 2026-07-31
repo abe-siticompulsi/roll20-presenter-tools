@@ -40,6 +40,59 @@
     return tileCount >= 13 ? 4 : 3;
   }
 
+  // ── Collection export/import ──
+
+  const EXPORT_FORMAT = 'r20-sticker-picker';
+  const EXPORT_VERSION = 1;
+
+  function exportPayload(list) {
+    return {
+      format: EXPORT_FORMAT,
+      version: EXPORT_VERSION,
+      stickers: list.map(function (s) { return { name: s.name, url: s.url }; }),
+    };
+  }
+
+  // Returns {added, skipped} on success or {error: 'invalid'|'version'}.
+  // Merge is non-destructive: an already-known URL is skipped (existing name wins).
+  function parseImport(text, existing) {
+    let data;
+    try { data = JSON.parse(text); } catch (e) { return { error: 'invalid' }; }
+    if (!data || data.format !== EXPORT_FORMAT || typeof data.version !== 'number' || !Array.isArray(data.stickers)) {
+      return { error: 'invalid' };
+    }
+    if (data.version > EXPORT_VERSION) return { error: 'version' };
+    const valid = data.stickers.filter(function (s) {
+      return s && typeof s.name === 'string' && typeof s.url === 'string';
+    });
+    const known = new Set(existing.map(function (s) { return s.url; }));
+    const added = [];
+    valid.forEach(function (s) {
+      if (!known.has(s.url)) {
+        known.add(s.url);
+        added.push({ name: s.name, url: s.url });
+      }
+    });
+    return { added: added, skipped: valid.length - added.length };
+  }
+
+  // ── Animated stickers (Lottie) ──
+  // Convention: "<base>.lottie.png" is the static preview that goes to chat;
+  // the Lottie JSON lives next to it as "<base>.lottie.json" (same host and
+  // directory, query/fragment preserved). The presenter derives the JSON URL
+  // with this same rule and falls back to the PNG if it cannot fetch it.
+
+  function lottieJsonUrlFor(url) {
+    const m = url.match(/^([^?#]*)\.lottie\.png([?#].*)?$/i);
+    return m ? m[1] + '.lottie.json' + (m[2] || '') : null;
+  }
+
+  // Courtesy for the add flow: pasting the JSON twin resolves to the PNG.
+  function normalizeStickerUrl(url) {
+    const m = url.match(/^([^?#]*)\.lottie\.json([?#].*)?$/i);
+    return m ? m[1] + '.lottie.png' + (m[2] || '') : url;
+  }
+
   const I18N = {
     en: {
       title: 'Stickers',
@@ -50,6 +103,12 @@
       removeTip: 'Remove this sticker',
       launcherTip: 'Open the sticker picker (Shift+click a sticker to send several)',
       badImage: 'preview failed',
+      exportTip: 'Export your sticker collection to a file',
+      importTip: 'Import stickers from a file (adds to your collection)',
+      importResult: '{added} added, {skipped} already present',
+      importInvalid: 'Not a valid sticker collection file.',
+      importVersion: 'This file comes from a newer version of the picker.',
+      animTip: 'Animated sticker (hover to preview)',
     },
     it: {
       title: 'Sticker',
@@ -60,6 +119,12 @@
       removeTip: 'Rimuovi questo sticker',
       launcherTip: 'Apri il selettore di sticker (Shift+clic su uno sticker per inviarne più di uno)',
       badImage: 'anteprima non caricata',
+      exportTip: 'Esporta la tua collezione di sticker in un file',
+      importTip: 'Importa sticker da un file (si aggiungono ai tuoi)',
+      importResult: '{added} aggiunti, {skipped} già presenti',
+      importInvalid: 'File di collezione non valido.',
+      importVersion: 'Questo file viene da una versione più recente del picker.',
+      animTip: 'Sticker animato (anteprima al passaggio del mouse)',
     },
   };
 
@@ -88,7 +153,7 @@
   // ── Node export guard: under `node --test` export the pure helpers and
   //    stop before touching any DOM. In the browser `module` is undefined. ──
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { chatMessageFor, pickLang, columnsFor, I18N, loadCustom, saveCustom, builtinStickers, STORAGE_KEY };
+    module.exports = { chatMessageFor, pickLang, columnsFor, I18N, loadCustom, saveCustom, builtinStickers, STORAGE_KEY, lottieJsonUrlFor, normalizeStickerUrl, exportPayload, parseImport, EXPORT_FORMAT, EXPORT_VERSION };
     return;
   }
 
