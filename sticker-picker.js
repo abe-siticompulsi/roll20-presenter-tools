@@ -240,6 +240,7 @@
   let panel = null;
   let exportBtn = null;
   let feedbackEl = null;
+  const hoverCleanups = new Set();
 
   function buildTile(sticker, isCustom) {
     const tile = document.createElement('div');
@@ -297,12 +298,14 @@
           hoverPlayer = res[0].loadAnimation({ container: hoverBox, renderer: 'svg', loop: true, autoplay: true, animationData: JSON.parse(res[1]) });
         }).catch(function () { /* player or JSON unavailable: keep the static preview */ });
       });
-      tile.addEventListener('mouseleave', function () {
+      function stopHoverPreview() {
         hovering = false;
         if (hoverPlayer) { hoverPlayer.destroy(); hoverPlayer = null; }
         if (hoverBox) { hoverBox.remove(); hoverBox = null; }
         img.style.visibility = '';
-      });
+      }
+      tile.addEventListener('mouseleave', stopHoverPreview);
+      hoverCleanups.add(stopHoverPreview);
     }
     tile.addEventListener('click', function (ev) {
       sendSticker(sticker);
@@ -312,6 +315,8 @@
   }
 
   function renderGrid() {
+    hoverCleanups.forEach(function (fn) { fn(); });
+    hoverCleanups.clear();
     const grid = panel.querySelector('.sp-grid');
     grid.replaceChildren();
     builtinStickers(lang).forEach(function (s) { grid.appendChild(buildTile(s, false)); });
@@ -436,6 +441,9 @@
   }
 
   function destroy() {
+    hoverCleanups.forEach(function (fn) { fn(); });
+    hoverCleanups.clear();
+    clearTimeout(feedbackTimer);
     document.removeEventListener('keydown', onKeyDown, true);
     document.removeEventListener('pointerdown', onPointerDown, true);
     const oldPanel = document.getElementById(PANEL_ID);
