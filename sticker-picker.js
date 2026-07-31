@@ -358,7 +358,7 @@
     feedbackEl = feedback;
     exportBtn = document.createElement('button');
     exportBtn.className = 'sp-tool sp-export';
-    exportBtn.textContent = '📤';
+    exportBtn.textContent = '💾';
     exportBtn.title = t.exportTip;
     exportBtn.addEventListener('click', function () {
       const blob = new Blob([JSON.stringify(exportPayload(customList), null, 2)], { type: 'application/json' });
@@ -370,7 +370,7 @@
     });
     const importBtn = document.createElement('button');
     importBtn.className = 'sp-tool sp-import';
-    importBtn.textContent = '📥';
+    importBtn.textContent = '📂';
     importBtn.title = t.importTip;
     const fileInput = document.createElement('input');
     fileInput.type = 'file';
