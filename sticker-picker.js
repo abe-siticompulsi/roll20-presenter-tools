@@ -147,7 +147,7 @@
   }
 
   function saveCustom(storage, list) {
-    storage.setItem(STORAGE_KEY, JSON.stringify(list));
+    storage.setItem(STORAGE_KEY, JSON.stringify(list.map(function (s) { return { name: s.name, url: s.url }; })));
   }
 
   // ── Node export guard: under `node --test` export the pure helpers and
@@ -183,8 +183,10 @@
   // lottie-web is loaded lazily (first hover on an animated tile) with the
   // same fetch+eval trick as the picker itself — Roll20's CSP blocks external
   // <script src> but allows fetch (jsDelivr sends open CORS) and eval.
+  // SECURITY: keep the _light build — it omits lottie's expression evaluator (Function), and animation JSON here is untrusted chat-supplied data.
   const LOTTIE_SRC = 'https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie_light.min.js';
   let lottiePromise = null;
+  const animTextCache = new Map();
   function ensureLottie() {
     if (window.lottie) return Promise.resolve(window.lottie);
     if (!lottiePromise) {
@@ -284,11 +286,11 @@
       let hovering = false, hoverPlayer = null, hoverBox = null;
       tile.addEventListener('mouseenter', function () {
         hovering = true;
-        const dataP = sticker._animText
-          ? Promise.resolve(sticker._animText)
+        const dataP = animTextCache.has(animJsonUrl)
+          ? Promise.resolve(animTextCache.get(animJsonUrl))
           : fetch(animJsonUrl)
               .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
-              .then(function (txt) { sticker._animText = txt; return txt; });
+              .then(function (txt) { animTextCache.set(animJsonUrl, txt); return txt; });
         Promise.all([ensureLottie(), dataP]).then(function (res) {
           if (!hovering || hoverPlayer) return;
           hoverBox = document.createElement('div');
@@ -385,7 +387,7 @@
         saveCustom(window.localStorage, customList);
         renderGrid();
         setFeedback(t.importResult.replace('{added}', res.added.length).replace('{skipped}', res.skipped));
-      });
+      }).catch(function () { setFeedback(t.importInvalid); });
     });
     head.appendChild(title);
     head.appendChild(feedback);

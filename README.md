@@ -41,8 +41,8 @@ javascript:(window.__r20spLang='it',fetch('https://raw.githubusercontent.com/abe
    makes Roll20 render the link as an inline image.
 3. Add your own stickers with the **+** tile (any publicly reachable image URL).
    They are stored in your browser's localStorage only — private to you.
-4. **Back up or share your collection** with the ⬇ / ⬆ buttons in the panel
-   header: ⬇ downloads `sticker-collection.json`, ⬆ imports such a file and
+4. **Back up or share your collection** with the 📤 / 📥 buttons in the panel
+   header: 📤 downloads `sticker-collection.json`, 📥 imports such a file and
    merges it into your collection (already-present URLs are kept unchanged).
 5. **Animated stickers** (Lottie, Telegram-style): host two files side by
    side — `<name>.lottie.png` (a static preview frame) and
