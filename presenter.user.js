@@ -4,7 +4,7 @@
 // @match       https://app.roll20.net/editor/*
 // @icon        data:image/x-icon;base64,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
 // @grant       none
-// @version     1.8
+// @version     3.3
 // @author      abe
 // @require     https://cdn.jsdelivr.net/npm/obs-websocket-js@5/dist/obs-ws.min.js
 // SECURITY: keep the _light build — it omits lottie's expression evaluator (Function), and animation JSON here is untrusted chat-supplied data.
@@ -15,6 +15,8 @@
 (function () {
   'use strict';
 
+  const SCRIPT_VERSION = '3.3';   // keep in sync with @version above
+
   // ── CSS ──────────────────────────────────────────────────────────────────
   const css = `
     .message.system {
@@ -24,6 +26,9 @@
       display: none;
     }
     #vm-master-toolbar {
+      display: none;
+    }
+    #vm-turn-order {
       display: none;
     }
     .parentContainer {
@@ -823,7 +828,7 @@
       lerp: 0.08,         // smoothness: fraction of the error corrected each frame
       maxSpeedPx: 14,     // px/frame speed cap → constant "cruise" on long pans (0 = uncapped)
       aimAtDestination: true, // aim at the token's DROP POINT (Backbone model), not its gliding mesh
-      deadzonePx: 0,      // px from center within which NOT to follow (0 = always center; e.g. 250 = "dead" zone)
+      deadzonePx: 250,    // px from centre within which NOT to follow (0 = always centre)
       minMovePx: 2,       // px: ignore errors below this threshold (anti-jitter)
       moveEpsilon: 3,     // world-units: threshold to consider a token "moving"
       releaseMs: 700,     // ms of token stillness after which it RELEASES (once the camera has arrived)
@@ -836,6 +841,7 @@
     window.__cameraFollowCfg = CFG;
 
     let targetMesh = null;        // the mesh currently being followed
+    let pinnedPoint = null;       // {x,y} world point (saved viewpoint) followed instead of a mesh
     let lastMoveT = 0;            // timestamp (ms) of the last detected token movement
     let expScrollL = scroller.scrollLeft, expScrollT = scroller.scrollTop; // scroll "expected" as left by us
     const lastPos = new Map();    // mesh.uniqueId -> {x, y} world position from the previous frame
@@ -855,6 +861,17 @@
       const u = (wx - (camTransform.position.x + cam.orthoLeft)) / (cam.orthoRight - cam.orthoLeft);
       const v = (wy - (camTransform.position.y + cam.orthoBottom)) / (cam.orthoTop - cam.orthoBottom);
       return { x: u * canvas.clientWidth, y: (1 - v) * canvas.clientHeight };
+    }
+
+    // Inverse of worldToScreen: which world point currently sits at a screen point.
+    function screenToWorld(sx, sy) {
+      const cam = scene.activeCamera;
+      const u = sx / canvas.clientWidth;
+      const v = 1 - sy / canvas.clientHeight;
+      return {
+        x: camTransform.position.x + cam.orthoLeft + u * (cam.orthoRight - cam.orthoLeft),
+        y: camTransform.position.y + cam.orthoBottom + v * (cam.orthoTop - cam.orthoBottom),
+      };
     }
 
     // World-space DESTINATION of a token. On drop, the Backbone model jumps straight
@@ -901,54 +918,63 @@
       }
       // 2) latch on when a token moves; record the moment and reset the scroll baseline.
       if (CFG.enabled && mover) {
+        if (glideTimer) { clearInterval(glideTimer); glideTimer = null; }  // a real move wins
         targetMesh = mover;
+        pinnedPoint = null;           // a real move always wins over a pinned viewpoint
         lastMoveT = performance.now();
         expScrollL = scroller.scrollLeft; expScrollT = scroller.scrollTop;
       }
 
       // 3) if not following, manual pan is completely free.
-      if (!CFG.enabled || !targetMesh) {
+      if (!CFG.enabled || (!targetMesh && !pinnedPoint)) {
         expScrollL = scroller.scrollLeft; expScrollT = scroller.scrollTop;
         return;
       }
 
       // 4) MANUAL OVERRIDE: if the scroll differs from what I had left,
       //    you're panning by hand → release the token immediately.
-      if (Math.abs(scroller.scrollLeft - expScrollL) > CFG.manualPanPx ||
-          Math.abs(scroller.scrollTop  - expScrollT) > CFG.manualPanPx) {
-        targetMesh = null;
+      if (performance.now() >= suppressOverrideUntil &&
+          (Math.abs(scroller.scrollLeft - expScrollL) > CFG.manualPanPx ||
+           Math.abs(scroller.scrollTop  - expScrollT) > CFG.manualPanPx)) {
+        targetMesh = null; pinnedPoint = null;
         expScrollL = scroller.scrollLeft; expScrollT = scroller.scrollTop;
         return;
       }
 
       // 5) target point and error: aim at the drop destination (model), not the gliding mesh.
-      const t = CFG.aimAtDestination
-        ? tokenDestination(targetMesh)
-        : (() => { const a = targetMesh.getAbsolutePosition(); return { x: a.x, y: a.y }; })();
+      const t = pinnedPoint ? pinnedPoint
+        : (CFG.aimAtDestination
+            ? tokenDestination(targetMesh)
+            : (() => { const a = targetMesh.getAbsolutePosition(); return { x: a.x, y: a.y }; })());
       const s = worldToScreen(t.x, t.y);
       const c = viewportCenter();
       const ex = s.x - c.x;
       const ey = s.y - c.y;
       const err = Math.hypot(ex, ey);
-      const arrived = err <= Math.max(CFG.minMovePx, CFG.deadzonePx);
+      // The dead zone exists so the camera ignores small TOKEN movements; it must not
+      // apply to an explicit target (pan or saved viewpoint), which would stop short.
+      const dz = pinnedPoint ? CFG.minMovePx : Math.max(CFG.minMovePx, CFG.deadzonePx);
+      const arrived = err <= dz;
 
       // 6) TIMED RELEASE: token still for releaseMs AND camera arrived → release.
       //    The camera is slower than the token now, so never cut the pan short;
       //    releaseHardMs is the safety net for unreachable targets (map edge).
       const still = performance.now() - lastMoveT;
       if (still > CFG.releaseMs && (arrived || still > CFG.releaseHardMs)) {
-        targetMesh = null;
+        targetMesh = null; pinnedPoint = null;
         return;
       }
 
       // 7) follow: scroll toward the "useful" center, capped at cruise speed.
       if (!arrived) {
-        let dx = ex * CFG.lerp;
-        let dy = ey * CFG.lerp;
+        const lerp = panLive ? 0.5 : CFG.lerp;      // live pan tracks the input closely
+        const cap = panLive ? 0 : CFG.maxSpeedPx;   // cinematic moves stay speed-capped
+        let dx = ex * lerp;
+        let dy = ey * lerp;
         const spd = Math.hypot(dx, dy);
-        if (CFG.maxSpeedPx && spd > CFG.maxSpeedPx) {
-          dx *= CFG.maxSpeedPx / spd;
-          dy *= CFG.maxSpeedPx / spd;
+        if (cap && spd > cap) {
+          dx *= cap / spd;
+          dy *= cap / spd;
         }
         scroller.scrollLeft += dx;
         scroller.scrollTop  += dy;
@@ -967,9 +993,826 @@
       }
     });
 
+    // ── PUBLIC API (consumed by the control-panel window) ───────────────────
+    // anchorSpan: how far outside the canvas the zoom anchor may go, in screen-fulls.
+    // Verified live: Roll20 honours anchors at least 4 screens out, with no clamping.
+    const CFGV = { restoreZoom: true, anchorSpan: 4, minZoom: 12 };
+    // 'safe' = only tokens you control or that are already in the turn tracker.
+    // 'all'  = every rendered token on the objects layer (can spoil unseen NPCs).
+    const CFGT = { source: 'safe' };
+    window.__tokenListCfg = CFGT;
+    let zoomTimer = null;
+    let glideTimer = null;
+    // Zoom points Roll20 actually yields per unit of deltaY. 0.5 was measured, but it
+    // is re-learned from every step: the anchor maths divides by (1 - k), so a stale
+    // estimate would show up as a pan that runs fast or slow.
+    let zoomYield = 0.5;
+    let yieldProbe = null;
+    // Zooming rescales scrollLeft/Top by a lot (Roll20 keeps the view centre fixed).
+    // While that happens the manual-pan detector must stand down, otherwise it reads
+    // our own zoom as 'the user grabbed the map' and drops the target we are framing.
+    let suppressOverrideUntil = 0;
+    let panLive = false;   // true while the pad/keys are driving: snappier, uncapped
+    window.__viewpointCfg = CFGV;
+    const api = window.__cameraFollow = {
+      cfg: CFG,
+      // Pan by a screen-px delta. Cancels any active follow, like a manual pan.
+      // Pan by a screen-px delta. It does NOT write scrollLeft/Top directly: Roll20
+      // recomputes scroll from its own viewport state whenever it zooms and silently
+      // DISCARDS our writes (measured: a +200 px write vanished exactly). Instead we
+      // move a world-anchored point and let the follow loop re-derive scroll every
+      // frame, which is immune to that rescaling and lets pan and zoom coexist.
+      panBy(dx, dy) {
+        api.cancelGlide();
+        const cam = scene.activeCamera;
+        const wpp = (cam.orthoRight - cam.orthoLeft) / canvas.clientWidth; // world units per screen px
+        if (!pinnedPoint) {
+          const c = viewportCenter();
+          pinnedPoint = screenToWorld(c.x, c.y);
+        }
+        pinnedPoint.x += dx * wpp;
+        pinnedPoint.y -= dy * wpp;      // screen y grows downwards, world y upwards
+        targetMesh = null;
+        panLive = true;
+        lastMoveT = performance.now();  // keep the loop alive while a key is held
+      },
+      // Frame a token by graphic id, exactly as if it had just moved: reuses the
+      // follow loop, so safe-area, easing, release and manual override all apply.
+      focusToken(id) {
+        const mesh = selectableTokens().find(m => m.name === 'image-instance-' + id);
+        if (!mesh) return false;
+        api.cancelGlide();
+        targetMesh = mesh;
+        lastMoveT = performance.now();
+        expScrollL = scroller.scrollLeft; expScrollT = scroller.scrollTop;
+        return true;
+      },
+      // Every RENDERED token on the objects layer — players AND NPCs. GM-layer and
+      // hidden tokens have isEnabled() === false, so they can never leak in here.
+      // Nameless props / map art are skipped unless they are player-selectable.
+      listTokens() {
+        let coll = null;
+        try { coll = window.Campaign.activePage().thegraphics; } catch (e) {}
+        // Creatures already in the turn tracker are, by definition, in play and known
+        // to the table — unlike a monster sitting in the dark waiting to be discovered.
+        const known = new Set();
+        try {
+          (JSON.parse(window.Campaign.get('turnorder') || '[]') || [])
+            .forEach(e => { if (e && e.id && e.id !== '-1') known.add(e.id); });
+        } catch (e) {}
+        const out = [];
+        (scene.meshes || []).forEach(m => {
+          if (!m.name || !m.name.startsWith('image-instance--')) return;
+          if (m.isEnabled && !m.isEnabled()) return;
+          const id = m.name.replace('image-instance-', '');
+          let g = null;
+          try { g = coll && coll.get(id); } catch (e) {}
+          if (!g || g.get('layer') !== 'objects') return;
+          const name = (g.get('name') || '').trim();
+          const pk = m.metadata && m.metadata.pickableIds;
+          let player = false;
+          try { player = !!(pk && pk.has && pk.has('selectable')); } catch (e) {}
+          if (!name && !player) return;
+          // Anti-spoiler: we cannot tell whether a token is currently lit (the fog is
+          // not queryable), so we gate on knowledge instead of visibility.
+          if (CFGT.source !== 'all' && !player && !known.has(id)) return;
+          out.push({ id, name: name || '(unnamed)', player, inTracker: known.has(id) });
+        });
+        return out.sort((a, b) => (b.player - a.player) || a.name.localeCompare(b.name));
+      },
+      // Native zoom: click Roll20's own buttons. A zoom change must update ortho,
+      // scrollWidth/Height AND scrollLeft/Top together — writing ortho directly
+      // desyncs everything, exactly like panning via cam-transform did.
+      zoomStep(dir) {
+        const box = document.getElementById('vm_zoom_buttons');
+        if (!box) return false;
+        const want = dir > 0 ? 'plus' : 'minus';
+        const el = [...box.querySelectorAll('*')]
+          .find(e => (e.textContent || '').trim().toLowerCase() === want);
+        if (!el) return false;
+        el.click();
+        return true;
+      },
+      // SMOOTH native zoom. Measured live: a synthetic Ctrl+wheel on the canvas is
+      // the only path Roll20 honours, and it is CONTINUOUS (57% -> 72.1% for
+      // deltaY 120), unlike the +/- buttons which snap in 10% steps. Roll20 does
+      // all the bookkeeping (ortho + scroll size + scroll position) itself.
+      // Negative deltaY zooms in. Zoom is centred on the safe-area-aware centre,
+      // so whatever you are framing stays put.
+      // Faithful replica of a REAL wheel event (captured from the physical mouse):
+      // Roll20 zooms on the PLAIN wheel — no modifiers — using tiny pixel deltas
+      // (deltaY 1-2, deltaMode 0), and it reads the LEGACY wheelDelta properties,
+      // which are exactly -3 * deltaY. new WheelEvent() cannot set those, so they
+      // must be defined on the instance before dispatch — that omission is why every
+      // earlier synthetic attempt fell through to Roll20's pan branch.
+      // Negative deltaY = zoom in. ~0.5 zoom points per unit of deltaY.
+      // One wheel step anchored anywhere on (or off) the canvas.
+      zoomAt(deltaY, sx, sy) {
+        try {
+          suppressOverrideUntil = performance.now() + 300;
+          // Learn the real yield from the previous step: Roll20 applies a wheel event
+          // a frame or so later, so we measure it on the way into the next one.
+          if (yieldProbe) {
+            const got = (api.zoomPercent() - yieldProbe.z) / -yieldProbe.d;
+            if (isFinite(got) && got > 0.1 && got < 2) zoomYield += (got - zoomYield) * 0.2;
+            yieldProbe = null;
+          }
+          // zoomPercent is rounded to 0.1, so only steps worth at least a point or so
+          // carry a usable measurement; smaller ones would teach us the rounding error.
+          const r = canvas.getBoundingClientRect();
+          const ev = new WheelEvent('wheel', {
+            bubbles: true, cancelable: true, deltaMode: 0,
+            deltaX: 0, deltaY, deltaZ: 0,
+            clientX: r.left + sx, clientY: r.top + sy,
+          });
+          const legacy = -deltaY * 3;
+          Object.defineProperty(ev, 'wheelDelta',  { value: legacy });
+          Object.defineProperty(ev, 'wheelDeltaY', { value: legacy });
+          Object.defineProperty(ev, 'wheelDeltaX', { value: 0 });
+          Object.defineProperty(ev, 'offsetX', { value: sx });
+          Object.defineProperty(ev, 'offsetY', { value: sy });
+          if (Math.abs(deltaY) >= 2) yieldProbe = { z: api.zoomPercent(), d: deltaY };
+          canvas.dispatchEvent(ev);
+          return true;
+        } catch (e) { return false; }
+      },
+      zoomBy(deltaY) { const c = viewportCenter(); return api.zoomAt(deltaY, c.x, c.y); },
+      // ── THE ANCHOR IS ALSO A PAN ACTUATOR ────────────────────────────────────
+      // Roll20's native zoom is anchored to the POINTER: the world point under the
+      // cursor stays under the cursor. Measured live and true to the pixel, and
+      // honoured even for anchors 4 screens OUTSIDE the canvas — no clamping at all.
+      // With k = zoomBefore / zoomAfter, one step moves the view centre by
+      //     C' = W + k * (C - W)
+      // so to shift the centre by a wanted screen delta we simply place the anchor at
+      //     anchor = centre + delta / (1 - k)
+      // The pan then falls out of Roll20's OWN bookkeeping instead of a scrollLeft
+      // write, which is exactly why it can no longer be discarded mid-zoom — that
+      // discarding is what made pan and zoom mutually exclusive before. Zooming out
+      // gives k > 1, flipping the anchor to the other side, which the formula does
+      // by itself. Authority per step is |1 - k| * anchorDistance: generous while the
+      // zoom moves, nil when it is still, hence the clamp (the caller falls back to
+      // scrolling once the zoom is at rest).
+      zoomAnchored(deltaY, panDx, panDy) {
+        const c = viewportCenter();
+        let sx = c.x, sy = c.y;
+        if (panDx || panDy) {
+          const z = api.zoomPercent();
+          const zNext = z + (-deltaY) * zoomYield;
+          const k = (z > 0 && zNext > 0) ? z / zNext : 1;
+          if (Math.abs(1 - k) > 1e-5) {
+            const mx = CFGV.anchorSpan * canvas.clientWidth;
+            const my = CFGV.anchorSpan * canvas.clientHeight;
+            sx = c.x + Math.max(-mx, Math.min(mx, panDx / (1 - k)));
+            sy = c.y + Math.max(-my, Math.min(my, panDy / (1 - k)));
+          }
+        }
+        return api.zoomAt(deltaY, sx, sy);
+      },
+      // Derived from the verified law: orthoHalfWidth = (canvasWidth/2) * (100/zoom%)
+      zoomPercent() {
+        try { return Math.round((canvas.clientWidth / 2) / scene.activeCamera.orthoRight * 1000) / 10; }
+        catch (e) { return null; }
+      },
+      // Frame an arbitrary WORLD point — same machinery as focusToken, so the
+      // safe-area centring, easing, release and manual override all apply.
+      focusWorld(x, y) {
+        pinnedPoint = { x, y };
+        targetMesh = null;
+        panLive = false;                // cinematic glide, not a live drag
+        lastMoveT = performance.now();
+        expScrollL = scroller.scrollLeft; expScrollT = scroller.scrollTop;
+      },
+      // Current view centre in world coords (cam-transform is a reliable READ).
+      viewCentre() { return { x: camTransform.position.x, y: camTransform.position.y }; },
+      // Stop following anything, so the follow loop leaves the scroll alone.
+      releasePan() {
+        targetMesh = null; pinnedPoint = null; panLive = false;
+        expScrollL = scroller.scrollLeft; expScrollT = scroller.scrollTop;
+      },
+      cancelGlide() { if (glideTimer) { clearInterval(glideTimer); glideTimer = null; } },
+      // ── glideTo: travel and zoom as ONE continuous camera move ───────────────
+      // Driven only by the zoom anchor (see zoomAnchored): not a single scrollLeft
+      // write, so there is nothing left for Roll20 to discard and the old two-phase
+      // "zoom, then pan" dance disappears.
+      // Two ideas make it work:
+      //  1. Pan progress is tied to how much ZOOM has been spent, not to elapsed time,
+      //     because zoom motion is literally what buys the pan (see the note on 1/z
+      //     below). The zoom itself is scheduled on smoothstep, so the move eases in
+      //     and out instead of decaying exponentially the way zoomTo does.
+      //  2. When the zoom change alone cannot buy the whole trip, we borrow some:
+      //     widen past the target, travel on the wide leg, tighten on the way in.
+      //     A crane move — the constraint turns into the look.
+      // Whatever the anchor could not buy is mopped up by the ordinary scroll follow
+      // at the end, which is safe again once the zoom has stopped.
+      glideTo(x, y, pct, opts) {
+        const o = opts || {};
+        api.cancelGlide();
+        api.releasePan();
+        const z0 = api.zoomPercent();
+        const zf = (pct && CFGV.restoreZoom) ? pct : z0;
+        // No real zoom change means no anchor to exploit — and a plain scroll pan
+        // already does this well. Borrowing a zoom-out just to travel would invent a
+        // camera move nobody asked for, so below 2% we simply pan.
+        if (!z0 || !zf || Math.abs(zf - z0) / z0 < 0.02) { api.focusWorld(x, y); return; }
+
+        const c0s = viewportCenter();
+        const C0 = screenToWorld(c0s.x, c0s.y);
+        const T = { x, y };
+        const wppOf = () => (scene.activeCamera.orthoRight - scene.activeCamera.orthoLeft) / canvas.clientWidth;
+        const travelPx = Math.hypot(T.x - C0.x, T.y - C0.y) / wppOf();
+
+        // Pan a zoom leg can buy: |1 - za/zb| x how far out the anchor may sit.
+        const env = CFGV.anchorSpan * Math.min(canvas.clientWidth, canvas.clientHeight);
+        const auth = (za, zb) => Math.abs(1 - za / zb) * env;
+        const need = travelPx * 1.3;      // margin: authority thins out at both ends
+        let zm = null;                    // apex of the borrowed zoom-out, if any
+        if (travelPx > 4 && auth(z0, zf) < need) {
+          // Widening to zm buys (z0/zm - 1) on the way out and (1 - zm/zf) on the way
+          // back in. Note the asymmetry: zooming OUT has unbounded authority, zooming
+          // IN can never buy more than one env. Solving z0/zm - zm/zf >= need/env for
+          // zm gives the deepest useful apex.
+          const N = need / env;
+          zm = Math.max(CFGV.minZoom, (-N * zf + Math.sqrt(N * N * zf * zf + 4 * z0 * zf)) / 2);
+          if (zm >= Math.min(z0, zf)) zm = null;   // nothing to borrow: run flat out
+        }
+        const L0 = Math.log(z0), Lf = Math.log(zf), Lm = zm ? Math.log(zm) : 0;
+        // The zoom itself runs on log-zoom, which is what reads as an even zoom rate.
+        // The PAN, though, advances on |d(1/z)|: authority per zoom step is env*|1-k|,
+        // which in world units integrates to env*100*|1/za - 1/zb|. So 1/z is literally
+        // the currency the pan is paid in. Scheduling the pan on log-zoom instead (the
+        // obvious guess) front-loads nothing and asks the tight end of a zoom-in to
+        // carry most of the trip, exactly where authority has collapsed — simulated at
+        // a 1478 px shortfall on a 6x zoom-in with a long trip.
+        const iv = (a, b) => Math.abs(1 / b - 1 / a);
+        const V = zm ? iv(z0, zm) + iv(zm, zf) : iv(z0, zf);
+        const ss = (u) => u * u * (3 - 2 * u);       // smoothstep: ease in AND out
+        // Scheduled zoom at time u, and the share of the trip it has paid for.
+        const sched = (u) => {
+          let L, done;
+          if (zm) {
+            if (u < 0.5) { L = L0 + ss(u * 2) * (Lm - L0); done = iv(z0, Math.exp(L)); }
+            else { L = Lm + ss((u - 0.5) * 2) * (Lf - Lm); done = iv(z0, zm) + iv(zm, Math.exp(L)); }
+          } else { L = L0 + ss(u) * (Lf - L0); done = iv(z0, Math.exp(L)); }
+          return { z: Math.exp(L), p: V > 1e-9 ? done / V : ss(u) };
+        };
+
+        const dur = o.durationMs || Math.max(900, Math.min(3500, 700 + travelPx * 0.6 + V * 900));
+        const t0 = performance.now();
+        glideTimer = setInterval(() => {
+          const u = Math.min(1, (performance.now() - t0) / dur);
+          const sc = sched(u);
+          const wpp = wppOf();
+          const cs = viewportCenter();
+          const C = screenToWorld(cs.x, cs.y);
+          // How far the centre still is from where the schedule wants it, in screen px.
+          let px =  ((C0.x + sc.p * (T.x - C0.x)) - C.x) / wpp;
+          let py = -((C0.y + sc.p * (T.y - C0.y)) - C.y) / wpp;
+          // scrollTop is an integer, so the centre reading quantises. Without a dead
+          // zone the loop chases that sub-pixel noise, and the anchor (which divides
+          // by a tiny 1 - k) swings wildly — that was the micro-stutter in the probe.
+          if (Math.abs(px) < 1.2) px = 0;
+          if (Math.abs(py) < 1.2) py = 0;
+          const dz = Math.max(-14, Math.min(14, -(sc.z - api.zoomPercent()) / Math.max(0.05, zoomYield)));
+          // smoothstep is flat at both ends, so the first and last frames ask for no
+          // zoom at all; only dispatch when there is something to do.
+          if (Math.abs(dz) > 0.05 || px || py) api.zoomAnchored(dz, px * 0.6, py * 0.6);
+          suppressOverrideUntil = performance.now() + 300;
+          if (u >= 1) {
+            api.cancelGlide();
+            const c2 = viewportCenter(), C2 = screenToWorld(c2.x, c2.y);
+            if (Math.hypot(T.x - C2.x, T.y - C2.y) / wppOf() > 2) api.focusWorld(T.x, T.y);
+          }
+        }, 16);
+      },
+      // Recall a saved viewpoint {x, y, zoom} as a single continuous move.
+      recallView(v) {
+        if (!v) return;
+        if (v.zoom && CFGV.restoreZoom) api.glideTo(v.x, v.y, v.zoom);
+        else api.focusWorld(v.x, v.y);
+      },
+      // Converge smoothly on a target zoom %. Closed loop: each tick measures the
+      // remaining ratio and issues a proportional wheel delta, so the K estimate
+      // below only affects how fast we get there, never whether we arrive.
+      zoomTo(pct, done) {
+        const finish = () => { if (done) done(); };
+        if (!pct || pct <= 0) return finish();
+        // Closed loop on the smooth wheel path: ~0.5 zoom points per deltaY unit,
+        // so a small clamped delta each frame glides to the target. Measuring every
+        // tick means the constant only affects speed, never whether we arrive.
+        clearTimeout(zoomTimer);
+        let guard = 240, ticks = 0;
+        const startZ = api.zoomPercent();
+        const tick = () => {
+          const c = api.zoomPercent();
+          if (c == null || guard-- <= 0) return finish();
+          if (++ticks === 12 && c === startZ) {   // wheel path dead here -> native steps
+            api.zoomStep(startZ < pct ? 1 : -1);
+            return finish();
+          }
+          const err = pct - c;                     // points still to travel
+          if (Math.abs(err) < 0.6) return finish();
+          api.zoomBy(Math.max(-8, Math.min(8, -err * 2)));
+          zoomTimer = setTimeout(tick, 16);
+        };
+        tick();
+      },
+      state() { return { enabled: CFG.enabled, following: !!(targetMesh || pinnedPoint) }; },
+    };
+
     console.log('[Roll20 Custom UI] Camera-follow (scroll-based) initialized (toggle: Cmd+Ctrl+B).');
   }
 
   initCameraFollow();
+
+  // ── CONTROL PANEL (second window) ──────────────────────────────────────────
+  // Live controls in a SEPARATE browser window. OBS captures the Roll20 *window*,
+  // so this panel never reaches the stream. Popup blockers require a user gesture,
+  // hence it opens on a shortcut: Cmd + Ctrl + 0.
+  // The panel is about:blank, so it inherits Roll20's origin and can talk to the
+  // opener directly (window.opener.__cameraFollow) — no postMessage needed.
+  function initControlPanel() {
+    const LS_KEY = 'r20custom.panel.tokenlist';
+    const LS_VIEWS = 'r20custom.panel.views';
+    const LS_ALIAS = 'r20custom.panel.aliases';
+    let win = null;
+
+    const SLIDERS = [
+      { key: 'deadzonePx',       label: 'Dead zone',      min: 0,   max: 600,  step: 10,   unit: 'px' },
+      { key: 'lerp',             label: 'Smoothness',     min: 0.02, max: 0.4, step: 0.01, unit: '' },
+      { key: 'maxSpeedPx',       label: 'Max speed',      min: 0,   max: 60,   step: 1,    unit: 'px/f' },
+      { key: 'verticalOffsetPx', label: 'Vertical offset', min: -300, max: 300, step: 5,   unit: 'px' },
+      { key: 'releaseMs',        label: 'Release delay',  min: 0,   max: 3000, step: 50,   unit: 'ms' },
+    ];
+
+    function panelHtml() {
+      const advRows = SLIDERS.map(s =>
+        '<div class="row"><label>' + s.label +
+        ' <output id="out-' + s.key + '"></output></div>' +
+        '<input type="range" id="sl-' + s.key + '" min="' + s.min + '" max="' + s.max +
+        '" step="' + s.step + '" data-unit="' + s.unit + '"></div>').join('');
+
+      return '<!doctype html><html><head><meta charset="utf-8"><title>Presenter panel</title><style>' +
+        'body{margin:0;padding:10px;background:#15161a;color:#e9e9ee;' +
+        'font:13px/1.5 ui-sans-serif,system-ui,-apple-system,sans-serif}' +
+        'h2{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:#8b8b98;margin:0;font-weight:600}' +
+        '.row{display:flex;justify-content:space-between;align-items:center;margin-bottom:2px}' +
+        'output{color:#9ad0ff;font-variant-numeric:tabular-nums}' +
+        'input[type=range]{width:100%;margin:0 0 8px}' +
+        'input[type=text]{background:#1d1f26;color:#e9e9ee;border:1px solid #33364a;' +
+        'border-radius:6px;padding:5px 7px;font-size:12px;min-width:0}' +
+        'select{width:100%;background:#1d1f26;color:#e9e9ee;border:1px solid #33364a;' +
+        'border-radius:6px;padding:5px;margin-bottom:6px}' +
+        'button{background:#2a2c36;color:#e9e9ee;border:1px solid #3a3d4a;border-radius:6px;' +
+        'padding:5px 10px;cursor:pointer;font-size:12px}button:hover{background:#343745}' +
+        'button.on{background:#1f7a3d;border-color:#2a9e51}button.off{background:#7a2020;border-color:#a02a2a}' +
+        /* token strip */
+        '.strip{display:flex;align-items:flex-start;gap:6px;margin-bottom:10px}' +
+        '.chips{display:flex;flex-wrap:wrap;gap:6px;flex:1;min-height:26px}' +
+        '.chip{display:inline-flex;align-items:center;gap:6px;background:#22242c;border:1px solid #33364a;' +
+        'border-radius:999px;padding:3px 10px;cursor:pointer;font-size:12px;white-space:nowrap}' +
+        '.chip:hover{background:#2c2f3a;color:#9ad0ff}.chip b{color:#7f8598;font-weight:600}' +
+        '.chip .x{display:none;background:none;border:0;color:#e9647a;cursor:pointer;padding:0;font-size:14px;line-height:1}' +
+        'body.editing .chip .x{display:inline}' +
+        '.empty{color:#565a66;font-size:12px;padding:3px 0}' +
+        /* responsive cards */
+        '.cards{display:grid;gap:10px;grid-template-columns:1fr}' +
+        '@media (min-width:620px){.cards{grid-template-columns:1fr 1fr}}' +
+        '.card{background:#1a1c22;border:1px solid #282b36;border-radius:10px;padding:10px}' +
+        '.card header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}' +
+        '#pad{width:100%;aspect-ratio:1;max-height:145px;background:#1d1f26;border:1px solid #33364a;' +
+        'border-radius:10px;position:relative;touch-action:none;cursor:grab;margin:0 auto 6px}' +
+        '#knob{position:absolute;width:32px;height:32px;border-radius:50%;background:#4a7fd0;' +
+        'left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none}' +
+        '.zoomrow{gap:8px;margin-bottom:6px}.zoomrow button{flex:0 0 auto;min-width:34px}' +
+        '.zoomrow output{flex:1;text-align:center}' +
+        'ul{list-style:none;padding:0;margin:0}' +
+        'li{display:flex;align-items:center;gap:8px;padding:3px 0;border-bottom:1px solid #24262f}' +
+        'li .n{flex:1;cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}' +
+        'li .n:hover{color:#9ad0ff}' +
+        '.hint{color:#70737f;font-size:11px;margin:6px 0}' +
+        'details{margin-top:10px;background:#1a1c22;border:1px solid #282b36;border-radius:10px;padding:8px 10px}' +
+        'summary{cursor:pointer;font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:#8b8b98}' +
+        'details[open] summary{margin-bottom:8px}' +
+        '.ver{text-align:right;color:#4d515c;font-size:10px;margin-top:8px}' +
+        '</style></head><body>' +
+
+        // ── tokens: horizontal chips, edit controls on demand ──
+        '<div class="strip"><div id="tokens" class="chips"></div>' +
+        '<button id="btn-tok-edit" title="Add / remove tokens">&#9998;</button></div>' +
+        '<div id="tok-edit" hidden>' +
+        '<select id="pick"></select>' +
+        '<div class="row"><button id="btn-add">Add</button>' +
+        '<button id="btn-refresh">Refresh list</button></div>' +
+        '<div class="hint">Click a chip (or press its number) to frame that token.</div></div>' +
+
+        // ── card 1: camera ──
+        '<div class="cards">' +
+        '<section class="card"><header><h2>Camera</h2><button id="btn-enabled"></button></header>' +
+        '<div id="pad"><div id="knob"></div></div>' +
+        '<div class="row zoomrow"><button id="btn-zout">&minus;</button>' +
+        '<output id="out-zoom"></output><button id="btn-zin">+</button></div>' +
+        '<input type="range" id="sl-zoom" min="10" max="250" step="1">' +
+        '<div class="hint">Pad or arrows to pan &middot; Q / A to zoom</div></section>' +
+
+        // ── card 2: turn & views ──
+        '<section class="card"><header><h2>Turn &amp; views</h2><button id="btn-turn"></button></header>' +
+        '<div class="hint">Current turn: <b id="turn-label">&mdash;</b></div>' +
+        '<div class="row" style="gap:6px"><select id="alias-target" style="flex:1;margin:0"></select>' +
+        '<button id="btn-alias">Link</button></div>' +
+        '<ul id="aliases"></ul>' +
+        '<div class="row" style="gap:6px;margin-top:8px">' +
+        '<input type="text" id="vw-name" placeholder="View name" style="flex:1">' +
+        '<button id="btn-vsave">Save view</button></div>' +
+        '<ul id="views"></ul></section>' +
+        '</div>' +
+
+        // ── everything else, folded away ──
+        '<details><summary>Advanced &mdash; camera tuning</summary>' + advRows + '</details>' +
+        '<div class="ver">userscript v' + SCRIPT_VERSION + '</div>' +
+        '</body></html>';
+    }
+
+    function wire(w) {
+      const api = window.__cameraFollow;
+      if (!api) { w.document.body.innerHTML = '<p>Camera follow not ready — reload Roll20.</p>'; return; }
+      const d = w.document, CFG = api.cfg;
+
+      // ── follow toggle + sliders ──
+      const btnEn = d.getElementById('btn-enabled');
+      function paintEnabled() {
+        btnEn.textContent = CFG.enabled ? 'ON' : 'OFF';
+        btnEn.className = CFG.enabled ? 'on' : 'off';
+      }
+      btnEn.onclick = () => { CFG.enabled = !CFG.enabled; paintEnabled(); };
+      paintEnabled();
+
+      SLIDERS.forEach(s => {
+        const el = d.getElementById('sl-' + s.key), out = d.getElementById('out-' + s.key);
+        const paint = () => { out.textContent = CFG[s.key] + (s.unit ? ' ' + s.unit : ''); };
+        el.value = CFG[s.key];
+        el.oninput = () => { CFG[s.key] = parseFloat(el.value); paint(); };
+        paint();
+      });
+
+      // ── motion: one eased loop drives pan AND zoom ──
+      // Inputs (pad, arrows, Q/A, +/-) set a TARGET velocity; the actual velocity
+      // chases it with an exponential ease. That gives acceleration on press and a
+      // glide to a stop on release, instead of a hard on/off. It also keeps working
+      // while the Roll20 window is unfocused, since it is timer-driven.
+      const pad = d.getElementById('pad'), knob = d.getElementById('knob');
+      const PAN_SPEED = 22;    // px per tick at full pad deflection
+      const KEY_PAN = 0.15;    // arrows pan far slower than the pad, for fine framing
+      const ZOOM_SPEED = 3;    // wheel-delta units per tick at full press
+      const EASE = 0.16;       // how quickly actual velocity chases the target
+      let tvx = 0, tvy = 0, tvz = 0;   // targets, -1..1
+      let vx = 0, vy = 0, vz = 0;      // actual, eased
+      let motion = null, zGuard = 0, zSeen = null;
+      let anchored = false, wasAnchored = false;   // which actuator is driving
+      let panScale = 1;        // 1 for the pad, KEY_PAN for the arrows
+
+      function setKnob(x, y) {
+        knob.style.left = (50 + x * 40) + '%';
+        knob.style.top = (50 + y * 40) + '%';
+      }
+      function motionTick() {
+        vx += (tvx - vx) * EASE;
+        vy += (tvy - vy) * EASE;
+        vz += (tvz - vz) * EASE;
+        const px = vx * PAN_SPEED * panScale, py = vy * PAN_SPEED * panScale;
+        const panning = Math.abs(px) > 0.02 || Math.abs(py) > 0.02;
+        // Pan and zoom are no longer mutually exclusive. While the zoom is moving, the
+        // wheel ANCHOR carries the pan as well (one actuator, so there is nothing for
+        // Roll20 to discard); once it is at rest, plain scrolling takes over. The
+        // handover rides on the eased velocities, which stay the single source of
+        // truth, so only the actuator changes, never the speed. Two thresholds keep
+        // it from flapping on the frame the boundary is crossed.
+        const az = Math.abs(vz);
+        anchored = anchored ? az > 0.0015 : az > 0.004;
+        if (anchored) {
+          if (!wasAnchored) api.releasePan();   // keep the follow loop off the scroll
+          if (zSeen === null) { zSeen = api.zoomPercent(); zGuard = 0; }
+          api.zoomAnchored(-vz * ZOOM_SPEED, panning ? px : 0, panning ? py : 0);
+          // if the wheel path ever stops working, fall back to the native steps
+          if (++zGuard === 15 && api.zoomPercent() === zSeen) { api.zoomStep(vz > 0 ? 1 : -1); tvz = vz = 0; }
+          paintZoom();
+        } else {
+          zSeen = null;
+          if (panning) api.panBy(px, py);
+        }
+        wasAnchored = anchored;
+        if (!tvx && !tvy && !tvz &&
+            Math.abs(vx) < 0.003 && Math.abs(vy) < 0.003 && Math.abs(vz) < 0.003) {
+          vx = vy = vz = 0; anchored = wasAnchored = false;
+          w.clearInterval(motion); motion = null;
+        }
+      }
+      function motionStart() { if (!motion) motion = w.setInterval(motionTick, 16); }
+
+      function movePad(e) {
+        panScale = 1;
+        const r = pad.getBoundingClientRect();
+        tvx = Math.max(-1, Math.min(1, (e.clientX - r.left - r.width / 2) / (r.width / 2)));
+        tvy = Math.max(-1, Math.min(1, (e.clientY - r.top - r.height / 2) / (r.height / 2)));
+        setKnob(tvx, tvy);
+      }
+      const padRelease = () => { tvx = tvy = 0; setKnob(0, 0); };
+      pad.addEventListener('pointerdown', e => { pad.setPointerCapture(e.pointerId); movePad(e); motionStart(); });
+      pad.addEventListener('pointermove', e => { if (e.buttons) movePad(e); });
+      pad.addEventListener('pointerup', padRelease);
+      pad.addEventListener('pointercancel', padRelease);
+
+      // ── token list ──
+      function load() { try { return JSON.parse(localStorage.getItem(LS_KEY)) || []; } catch (e) { return []; } }
+      function save(a) { try { localStorage.setItem(LS_KEY, JSON.stringify(a)); } catch (e) {} }
+
+      const pick = d.getElementById('pick'), ul = d.getElementById('tokens');
+      d.getElementById('btn-tok-edit').onclick = () => {
+        const box = d.getElementById('tok-edit');
+        box.hidden = !box.hidden;
+        d.body.classList.toggle('editing', !box.hidden);
+      };
+      function refreshPick() {
+        const list = api.listTokens();
+        pick.innerHTML = list.map(t =>
+          '<option value="' + t.id + '" data-name="' + t.name.replace(/"/g, '&quot;') + '">' +
+          t.name + (t.player ? '' : ' · NPC') + '</option>').join('')
+          || '<option value="">(no token on this page)</option>';
+      }
+      function renderList() {
+        const a = load();
+        ul.innerHTML = '';
+        if (!a.length) {
+          const e = d.createElement('span'); e.className = 'empty';
+          e.textContent = 'No tokens yet — use the pencil to add some.';
+          ul.appendChild(e); return;
+        }
+        a.forEach((t, i) => {
+          const c = d.createElement('span'); c.className = 'chip'; c.title = t.name;
+          c.onclick = () => api.focusToken(t.id);
+          if (i < 9) { const b = d.createElement('b'); b.textContent = i + 1; c.appendChild(b); }
+          c.appendChild(d.createTextNode(t.name));
+          const x = d.createElement('button'); x.className = 'x'; x.textContent = '×';
+          x.onclick = ev => { ev.stopPropagation(); const b = load(); b.splice(i, 1); save(b); renderList(); };
+          c.appendChild(x); ul.appendChild(c);
+        });
+      }
+      d.getElementById('btn-add').onclick = () => {
+        const id = pick.value; if (!id) return;
+        const name = pick.options[pick.selectedIndex].dataset.name || pick.options[pick.selectedIndex].textContent;
+        const a = load();
+        if (!a.some(t => t.id === id)) { a.push({ id, name }); save(a); renderList(); }
+      };
+      d.getElementById('btn-refresh').onclick = refreshPick;
+      refreshPick(); renderList();
+
+      // ── zoom: buttons feed the eased motion loop; slider jumps via zoomTo ──
+      const outZoom = d.getElementById('out-zoom'), slZoom = d.getElementById('sl-zoom');
+      let zDragging = false;
+      function paintZoom() {
+        const z = api.zoomPercent();
+        outZoom.textContent = z == null ? '—' : z + ' %';
+        if (z != null && !zDragging) slZoom.value = Math.round(z);
+      }
+      [['btn-zin', 1], ['btn-zout', -1]].forEach(([id, dir]) => {
+        const b = d.getElementById(id);
+        b.addEventListener('pointerdown', () => { tvz = dir; motionStart(); });
+        b.addEventListener('pointerup', () => { tvz = 0; });
+        b.addEventListener('pointerleave', () => { tvz = 0; });
+      });
+      slZoom.addEventListener('pointerdown', () => { zDragging = true; });
+      slZoom.addEventListener('pointerup', () => { zDragging = false; });
+      slZoom.addEventListener('input', () => api.zoomTo(parseFloat(slZoom.value)));
+      w.setInterval(paintZoom, 500); paintZoom();
+
+      // ── initiative auto-follow ──
+      const btnTurn = d.getElementById('btn-turn');
+      function paintTurn() {
+        const t = window.__turnFollowCfg;
+        btnTurn.textContent = !t ? 'n/a' : (t.enabled ? 'ON' : 'OFF');
+        btnTurn.className = !t ? '' : (t.enabled ? 'on' : 'off');
+      }
+      btnTurn.onclick = () => {
+        const t = window.__turnFollowCfg;
+        if (t) { t.enabled = !t.enabled; paintTurn(); }
+      };
+      paintTurn();
+
+      // ── viewpoints ──
+      const jload = (k) => { try { return JSON.parse(localStorage.getItem(k)) || null; } catch (e) { return null; } };
+      const jsave = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+      const loadViews = () => jload(LS_VIEWS) || [];
+      const loadAlias = () => jload(LS_ALIAS) || {};
+
+      const viewsUl = d.getElementById('views');
+      function renderViews() {
+        const a = loadViews();
+        viewsUl.innerHTML = '';
+        a.forEach((v, i) => {
+          const li = d.createElement('li');
+          const n = d.createElement('span'); n.className = 'n';
+          n.textContent = v.name + (v.zoom ? ' · ' + v.zoom + '%' : '');
+          n.onclick = () => api.recallView(v);
+          const x = d.createElement('button'); x.textContent = '×';
+          x.onclick = () => { const b = loadViews(); b.splice(i, 1); jsave(LS_VIEWS, b); renderViews(); refreshAliasTargets(); };
+          li.append(n, x); viewsUl.appendChild(li);
+        });
+      }
+      d.getElementById('btn-vsave').onclick = () => {
+        const el = d.getElementById('vw-name');
+        const name = (el.value || '').trim(); if (!name) { el.focus(); return; }
+        const c = api.viewCentre();
+        const a = loadViews();
+        const v = { name, x: Math.round(c.x), y: Math.round(c.y), zoom: api.zoomPercent() };
+        const i = a.findIndex(o => o.name === name);
+        if (i >= 0) a[i] = v; else a.push(v);
+        jsave(LS_VIEWS, a); el.value = ''; renderViews(); refreshAliasTargets();
+      };
+
+      // ── tracker links (alias: tracker row → token or viewpoint) ──
+      const aliasSel = d.getElementById('alias-target'), aliasUl = d.getElementById('aliases');
+      function refreshAliasTargets() {
+        const views = loadViews().map(v => '<option value="view:' + v.name + '">View · ' + v.name + '</option>');
+        const toks = api.listTokens().map(t =>
+          '<option value="token:' + t.id + '">Token · ' + t.name + (t.player ? '' : ' · NPC') + '</option>');
+        aliasSel.innerHTML = views.concat(toks).join('') || '<option value="">(nothing to link)</option>';
+      }
+      function renderAliases() {
+        const m = loadAlias();
+        aliasUl.innerHTML = '';
+        Object.keys(m).forEach(k => {
+          const t = m[k];
+          const li = d.createElement('li');
+          const n = d.createElement('span'); n.className = 'n';
+          n.textContent = (m[k].label || k) + '  →  ' + (t.type === 'view' ? t.name : (t.tokenName || t.id));
+          const x = d.createElement('button'); x.textContent = '×';
+          x.onclick = () => { const b = loadAlias(); delete b[k]; jsave(LS_ALIAS, b); renderAliases(); };
+          li.append(n, x); aliasUl.appendChild(li);
+        });
+      }
+      d.getElementById('btn-alias').onclick = () => {
+        const cur = window.__turnCurrent && window.__turnCurrent();
+        if (!cur) return;
+        const val = aliasSel.value; if (!val) return;
+        const m = loadAlias();
+        if (val.startsWith('view:')) m[cur.key] = { type: 'view', name: val.slice(5), label: cur.label };
+        else {
+          const id = val.slice(6);
+          const t = api.listTokens().find(o => o.id === id);
+          m[cur.key] = { type: 'token', id, tokenName: t ? t.name : id, label: cur.label };
+        }
+        jsave(LS_ALIAS, m); renderAliases();
+      };
+
+      const turnLabel = d.getElementById('turn-label');
+      w.setInterval(() => {
+        const cur = window.__turnCurrent && window.__turnCurrent();
+        turnLabel.textContent = cur ? cur.label : '—';
+      }, 1000);
+
+      renderViews(); refreshAliasTargets(); renderAliases();
+
+      // ── keyboard inside the panel: arrows pan, digits frame a token ──
+      // Arrows pan, Q / A zoom in / out, digits frame a saved token. All eased.
+      const held = new Set();
+      const norm = k => (k.length === 1 ? k.toLowerCase() : k);
+      function applyKeys() {
+        panScale = KEY_PAN;
+        tvx = (held.has('ArrowRight') ? 1 : 0) - (held.has('ArrowLeft') ? 1 : 0);
+        tvy = (held.has('ArrowDown') ? 1 : 0) - (held.has('ArrowUp') ? 1 : 0);
+        tvz = (held.has('q') ? 1 : 0) - (held.has('a') ? 1 : 0);
+        setKnob(tvx, tvy);
+      }
+      // A text field, select or slider owns the keyboard while focused: otherwise
+      // typing a view name would fire token shortcuts and zoom.
+      const typing = el => !!el && (/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName) || el.isContentEditable);
+      d.addEventListener('keydown', e => {
+        if (typing(e.target)) return;
+        if (e.key >= '1' && e.key <= '9') {
+          const t = load()[parseInt(e.key, 10) - 1];
+          if (t) { api.focusToken(t.id); e.preventDefault(); }
+          return;
+        }
+        const k = norm(e.key);
+        if (k.startsWith('Arrow') || k === 'q' || k === 'a') {
+          held.add(k); applyKeys(); motionStart(); e.preventDefault();
+        }
+      });
+      d.addEventListener('keyup', e => { if (held.delete(norm(e.key))) applyKeys(); });
+      // dropping focus into a field must not leave a key stuck down
+      d.addEventListener('focusin', () => { if (held.size) { held.clear(); applyKeys(); } });
+
+      w.addEventListener('beforeunload', () => { if (motion) w.clearInterval(motion); });
+    }
+
+    function openPanel() {
+      if (win && !win.closed) { win.focus(); return; }
+      win = window.open('', 'r20-control-panel', 'width=430,height=780,popup=yes');
+      if (!win) { console.warn('[Roll20 Custom UI] Control panel blocked by the popup blocker.'); return; }
+      win.document.write(panelHtml());
+      win.document.close();
+      wire(win);
+      console.log('[Roll20 Custom UI] Control panel opened.');
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.metaKey && e.ctrlKey && e.key === '0') { e.preventDefault(); openPanel(); }
+    });
+    window.__openControlPanel = openPanel;
+    console.log('[Roll20 Custom UI] Control panel ready (open: Cmd+Ctrl+0).');
+  }
+
+  initControlPanel();
+
+  // ── TURN-ORDER AUTO-FOLLOW ─────────────────────────────────────────────────
+  // Frames whoever's turn it is. Debounced, so a GM stepping the tracker quickly
+  // (e.g. to recover a skipped turn) produces ONE camera move, at the end.
+  // Runtime tuning: window.__turnFollowCfg
+  function initTurnFollow() {
+    if (!window.Campaign || typeof window.Campaign.on !== 'function' || !window.__cameraFollow) {
+      setTimeout(initTurnFollow, 500); return;
+    }
+    const TURN = { enabled: true, debounceMs: 1200 };
+    window.__turnFollowCfg = TURN;
+    let timer = null, lastId = null;
+
+    // The current tracker row, as {key, label, isToken}. Custom group rows (no
+    // token) get a 'custom:<label>' key so they can still be linked to a viewpoint.
+    function entryAt(i) {
+      let list = [];
+      try { list = JSON.parse(window.Campaign.get('turnorder') || '[]'); } catch (e) { return null; }
+      const e0 = list[i];
+      if (!e0) return null;
+      const isToken = !!(e0.id && e0.id !== '-1');
+      let label = (e0.custom || '').trim();
+      if (isToken) {
+        try {
+          const g = window.Campaign.activePage().thegraphics.get(e0.id);
+          label = (g && g.get('name')) || e0.id;
+        } catch (e) { label = e0.id; }
+      }
+      return { key: isToken ? e0.id : 'custom:' + label, label: label || '(unnamed)', isToken, entry: e0 };
+    }
+    const currentEntry = () => entryAt(0);
+    window.__turnCurrent = currentEntry;
+
+    function apply(override) {
+      if (!TURN.enabled) return;
+      const cur = override || currentEntry();
+      if (!cur) return;
+      if (cur.key === lastId) return;                 // top entry unchanged
+      lastId = cur.key;
+
+      // an explicit link always wins — this is what makes NPC group rows work
+      let alias = null;
+      try { alias = (JSON.parse(localStorage.getItem('r20custom.panel.aliases')) || {})[cur.key]; } catch (e) {}
+      if (alias) {
+        if (alias.type === 'view') {
+          let v = null;
+          try { v = (JSON.parse(localStorage.getItem('r20custom.panel.views')) || []).find(o => o.name === alias.name); } catch (e) {}
+          if (v) { window.__cameraFollow.recallView(v); return; }
+        } else if (alias.type === 'token') {
+          if (window.__cameraFollow.focusToken(alias.id)) return;
+        }
+      }
+
+      if (!cur.isToken) return;                       // custom row with no link: leave the camera alone
+      try {
+        if (cur.entry._pageid && cur.entry._pageid !== window.Campaign.activePage().id) return;
+      } catch (e) {}
+      if (!window.__cameraFollow.focusToken(cur.entry.id)) {
+        console.log('[Roll20 Custom UI] turn token not rendered here:', cur.entry.id);
+      }
+    }
+
+    // Debounced scheduling — shared by the real tracker event and by the simulator,
+    // so a dry run exercises exactly the same path as a live turn change.
+    function schedule(override) {
+      clearTimeout(timer);
+      timer = setTimeout(() => apply(override), TURN.debounceMs);
+    }
+
+    window.Campaign.on('change:turnorder', () => schedule(null));
+    window.__turnFollowApply = apply;
+
+    // DRY RUN: pretend the tracker advanced to entry #i of the REAL turn order.
+    // Read-only — never writes Campaign, so nothing is synced to the server or to
+    // the other players. Returns the row it will act on (after the debounce).
+    window.__turnSimulate = (i) => {
+      const e = entryAt(i);
+      if (!e) { console.warn('[Roll20 Custom UI] no turn-order entry #' + i); return null; }
+      console.log('[Roll20 Custom UI] simulate turn #' + i + ' → ' + e.label +
+                  (e.isToken ? '' : ' (custom row)'));
+      schedule(e);
+      return e;
+    };
+    window.__turnList = () => {
+      const out = [];
+      for (let i = 0; ; i++) { const e = entryAt(i); if (!e) break; out.push({ i, label: e.label, isToken: e.isToken, key: e.key }); }
+      return out;
+    };
+    window.__turnResetGuard = () => { lastId = null; };
+    console.log('[Roll20 Custom UI] Turn-order auto-follow ready (debounce ' + TURN.debounceMs + 'ms).');
+  }
+  initTurnFollow();
 
 })();
