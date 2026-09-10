@@ -4,7 +4,7 @@
 // @match       https://app.roll20.net/editor/*
 // @icon        data:image/x-icon;base64,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
 // @grant       none
-// @version     3.3
+// @version     3.8
 // @author      abe
 // @require     https://cdn.jsdelivr.net/npm/obs-websocket-js@5/dist/obs-ws.min.js
 // SECURITY: keep the _light build — it omits lottie's expression evaluator (Function), and animation JSON here is untrusted chat-supplied data.
@@ -15,7 +15,7 @@
 (function () {
   'use strict';
 
-  const SCRIPT_VERSION = '3.3';   // keep in sync with @version above
+  const SCRIPT_VERSION = '3.8';   // keep in sync with @version above
 
   // ── CSS ──────────────────────────────────────────────────────────────────
   const css = `
@@ -845,6 +845,34 @@
     let lastMoveT = 0;            // timestamp (ms) of the last detected token movement
     let expScrollL = scroller.scrollLeft, expScrollT = scroller.scrollTop; // scroll "expected" as left by us
     const lastPos = new Map();    // mesh.uniqueId -> {x, y} world position from the previous frame
+    let cinema = null;            // {fx, fy, t0, dur}: eased approach to an explicit framing
+    let explicitAim = false;      // true when WE aimed the camera, rather than a token moving
+
+    // Ease an explicit framing (a token chip, a turn, a viewpoint) instead of letting
+    // the follow loop's exponential decay do it: that is right for tracking a token
+    // live, but as a deliberate camera move it lunges off the mark and then crawls.
+    // smoothstep accelerates away and settles. The loop keeps aiming at the CURRENT
+    // target every frame, so a token that moves mid-approach is still handled.
+    function startCinema(tx, ty) {
+      const c = viewportCenter();
+      const from = screenToWorld(c.x, c.y);
+      const cam = scene.activeCamera;
+      const wpp = (cam.orthoRight - cam.orthoLeft) / canvas.clientWidth;
+      const dist = Math.hypot(tx - from.x, ty - from.y) / wpp;
+      if (dist < CFG.minMovePx) { cinema = null; return; }
+      cinema = { fx: from.x, fy: from.y, t0: performance.now(),
+                 dur: Math.max(500, Math.min(2200, 450 + dist * 0.5)) };
+    }
+
+    // Any RENDERED token, player-controlled or not. selectableTokens() is deliberately
+    // narrower — it drives auto-follow, which should only react to the players' own
+    // moves — but an EXPLICIT framing (chip, digit, turn) must reach NPCs too, which
+    // is the whole point of having them in the list. isEnabled() still excludes
+    // GM-layer and hidden tokens, so this cannot be used to find something unseen.
+    function renderedToken(id) {
+      const m = (scene.meshes || []).find(o => o.name === 'image-instance-' + id);
+      return (m && (!m.isEnabled || m.isEnabled())) ? m : null;
+    }
 
     function selectableTokens() {
       return scene.meshes.filter(m => {
@@ -919,6 +947,7 @@
       // 2) latch on when a token moves; record the moment and reset the scroll baseline.
       if (CFG.enabled && mover) {
         if (glideTimer) { clearInterval(glideTimer); glideTimer = null; }  // a real move wins
+        cinema = null; explicitAim = false;   // live tracking, not a deliberate move
         targetMesh = mover;
         pinnedPoint = null;           // a real move always wins over a pinned viewpoint
         lastMoveT = performance.now();
@@ -936,7 +965,7 @@
       if (performance.now() >= suppressOverrideUntil &&
           (Math.abs(scroller.scrollLeft - expScrollL) > CFG.manualPanPx ||
            Math.abs(scroller.scrollTop  - expScrollT) > CFG.manualPanPx)) {
-        targetMesh = null; pinnedPoint = null;
+        targetMesh = null; pinnedPoint = null; cinema = null; explicitAim = false;
         expScrollL = scroller.scrollLeft; expScrollT = scroller.scrollTop;
         return;
       }
@@ -946,29 +975,50 @@
         : (CFG.aimAtDestination
             ? tokenDestination(targetMesh)
             : (() => { const a = targetMesh.getAbsolutePosition(); return { x: a.x, y: a.y }; })());
-      const s = worldToScreen(t.x, t.y);
       const c = viewportCenter();
+      // The dead zone exists so the camera ignores small TOKEN movements; it must not
+      // apply to a target WE chose (pan, viewpoint, token chip, turn), which would
+      // otherwise stop up to deadzonePx short of the thing you asked to look at.
+      const dz = (pinnedPoint || explicitAim) ? CFG.minMovePx : Math.max(CFG.minMovePx, CFG.deadzonePx);
+      // Arrival is judged on the REAL target, never on the eased waypoint below:
+      // otherwise the approach would look "arrived" from its first frame and the
+      // release timer would drop the target halfway there.
+      const sT = worldToScreen(t.x, t.y);
+      const arrived = Math.hypot(sT.x - c.x, sT.y - c.y) <= dz;
+
+      // While easing, chase a waypoint travelling the path on smoothstep instead of
+      // the target itself. Re-read from t every frame, so a moving token still works.
+      let aim = t;
+      if (cinema) {
+        const u = (performance.now() - cinema.t0) / cinema.dur;
+        if (u >= 1) cinema = null;
+        else {
+          const e = u * u * (3 - 2 * u);
+          aim = { x: cinema.fx + e * (t.x - cinema.fx), y: cinema.fy + e * (t.y - cinema.fy) };
+        }
+      }
+      const s = worldToScreen(aim.x, aim.y);
       const ex = s.x - c.x;
       const ey = s.y - c.y;
-      const err = Math.hypot(ex, ey);
-      // The dead zone exists so the camera ignores small TOKEN movements; it must not
-      // apply to an explicit target (pan or saved viewpoint), which would stop short.
-      const dz = pinnedPoint ? CFG.minMovePx : Math.max(CFG.minMovePx, CFG.deadzonePx);
-      const arrived = err <= dz;
 
       // 6) TIMED RELEASE: token still for releaseMs AND camera arrived → release.
       //    The camera is slower than the token now, so never cut the pan short;
       //    releaseHardMs is the safety net for unreachable targets (map edge).
       const still = performance.now() - lastMoveT;
       if (still > CFG.releaseMs && (arrived || still > CFG.releaseHardMs)) {
-        targetMesh = null; pinnedPoint = null;
+        targetMesh = null; pinnedPoint = null; cinema = null; explicitAim = false;
         return;
       }
 
       // 7) follow: scroll toward the "useful" center, capped at cruise speed.
       if (!arrived) {
-        const lerp = panLive ? 0.5 : CFG.lerp;      // live pan tracks the input closely
-        const cap = panLive ? 0 : CFG.maxSpeedPx;   // cinematic moves stay speed-capped
+        // While easing, sit ON the waypoint rather than chasing it: a lag filter would
+        // trail it by roughly one frame of its speed, so the smoothstep's deceleration
+        // gets spent closing that gap instead of being seen, and whatever is left over
+        // is then crawled out at CFG.lerp once the ease ends. The waypoint is already
+        // speed-shaped, so the cruise cap stands down too.
+        const lerp = cinema ? 1 : (panLive ? 0.5 : CFG.lerp);
+        const cap = (cinema || panLive) ? 0 : CFG.maxSpeedPx;
         let dx = ex * lerp;
         let dy = ey * lerp;
         const spd = Math.hypot(dx, dy);
@@ -1024,6 +1074,7 @@
       // frame, which is immune to that rescaling and lets pan and zoom coexist.
       panBy(dx, dy) {
         api.cancelGlide();
+        cinema = null; explicitAim = false;   // a live drag overrides any eased approach
         const cam = scene.activeCamera;
         const wpp = (cam.orthoRight - cam.orthoLeft) / canvas.clientWidth; // world units per screen px
         if (!pinnedPoint) {
@@ -1039,10 +1090,14 @@
       // Frame a token by graphic id, exactly as if it had just moved: reuses the
       // follow loop, so safe-area, easing, release and manual override all apply.
       focusToken(id) {
-        const mesh = selectableTokens().find(m => m.name === 'image-instance-' + id);
+        const mesh = renderedToken(id);
         if (!mesh) return false;
         api.cancelGlide();
         targetMesh = mesh;
+        pinnedPoint = null;      // a pinned viewpoint would otherwise win in the loop
+        explicitAim = true;
+        const t = tokenDestination(mesh);
+        startCinema(t.x, t.y);
         lastMoveT = performance.now();
         expScrollL = scroller.scrollLeft; expScrollT = scroller.scrollTop;
         return true;
@@ -1162,11 +1217,24 @@
           if (Math.abs(1 - k) > 1e-5) {
             const mx = CFGV.anchorSpan * canvas.clientWidth;
             const my = CFGV.anchorSpan * canvas.clientHeight;
-            sx = c.x + Math.max(-mx, Math.min(mx, panDx / (1 - k)));
-            sy = c.y + Math.max(-my, Math.min(my, panDy / (1 - k)));
+            const rx = panDx / (1 - k), ry = panDy / (1 - k);
+            // Clamp the anchor as a VECTOR. Clamping each axis on its own changes the
+            // DIRECTION of the pan as soon as one of them alone hits its limit — and
+            // since the canvas is wider than tall, a diagonal drifted sideways.
+            const f = Math.min(1, mx / (Math.abs(rx) || 1e-9), my / (Math.abs(ry) || 1e-9));
+            sx = c.x + rx * f;
+            sy = c.y + ry * f;
           }
         }
         return api.zoomAt(deltaY, sx, sy);
+      },
+      // How much pan (screen px) a wheel step of this size can buy right now. Goes to
+      // zero as the zoom slows, which is what decides who drives — see the panel loop.
+      panAuthority(deltaY) {
+        const z = api.zoomPercent();
+        const zNext = z + (-deltaY) * zoomYield;
+        if (!(z > 0) || !(zNext > 0)) return 0;
+        return Math.abs(1 - z / zNext) * CFGV.anchorSpan * Math.min(canvas.clientWidth, canvas.clientHeight);
       },
       // Derived from the verified law: orthoHalfWidth = (canvasWidth/2) * (100/zoom%)
       zoomPercent() {
@@ -1179,6 +1247,8 @@
         pinnedPoint = { x, y };
         targetMesh = null;
         panLive = false;                // cinematic glide, not a live drag
+        explicitAim = true;
+        startCinema(x, y);
         lastMoveT = performance.now();
         expScrollL = scroller.scrollLeft; expScrollT = scroller.scrollTop;
       },
@@ -1187,6 +1257,7 @@
       // Stop following anything, so the follow loop leaves the scroll alone.
       releasePan() {
         targetMesh = null; pinnedPoint = null; panLive = false;
+        cinema = null; explicitAim = false;
         expScrollL = scroller.scrollLeft; expScrollT = scroller.scrollTop;
       },
       cancelGlide() { if (glideTimer) { clearInterval(glideTimer); glideTimer = null; } },
@@ -1468,17 +1539,28 @@
       let vx = 0, vy = 0, vz = 0;      // actual, eased
       let motion = null, zGuard = 0, zSeen = null;
       let anchored = false, wasAnchored = false;   // which actuator is driving
-      let panScale = 1;        // 1 for the pad, KEY_PAN for the arrows
+      // Pad and arrows are separate SOURCES for the same pan target. Keeping them in
+      // one pair of variables meant every keypress rewrote the pad's deflection, so
+      // zooming with Q while dragging the pad snapped the knob back and killed the pan.
+      let padActive = false, padX = 0, padY = 0, keyX = 0, keyY = 0;
 
       function setKnob(x, y) {
         knob.style.left = (50 + x * 40) + '%';
         knob.style.top = (50 + y * 40) + '%';
       }
+      // The pad wins while it is held; the arrows take back over when it is released.
+      // The speed difference lives in the TARGET, not in a multiplier applied to the
+      // eased velocity: that way handing over from pad to arrows is smoothed by the
+      // ease like any other change, instead of dropping the speed 6x in one frame.
+      function applyMotion() {
+        if (padActive) { tvx = padX; tvy = padY; setKnob(padX, padY); }
+        else { tvx = keyX * KEY_PAN; tvy = keyY * KEY_PAN; setKnob(keyX, keyY); }
+      }
       function motionTick() {
         vx += (tvx - vx) * EASE;
         vy += (tvy - vy) * EASE;
         vz += (tvz - vz) * EASE;
-        const px = vx * PAN_SPEED * panScale, py = vy * PAN_SPEED * panScale;
+        const px = vx * PAN_SPEED, py = vy * PAN_SPEED;
         const panning = Math.abs(px) > 0.02 || Math.abs(py) > 0.02;
         // Pan and zoom are no longer mutually exclusive. While the zoom is moving, the
         // wheel ANCHOR carries the pan as well (one actuator, so there is nothing for
@@ -1486,12 +1568,20 @@
         // handover rides on the eased velocities, which stay the single source of
         // truth, so only the actuator changes, never the speed. Two thresholds keep
         // it from flapping on the frame the boundary is crossed.
+        // The handover is decided by whether the zoom can still CARRY the pan, not by
+        // the zoom speed alone. As vz eases out, (1 - k) collapses and the anchor the
+        // pan would need runs off to infinity; clamped, it delivers a fraction of the
+        // requested movement — the pan slowed to a crawl and, on a diagonal, bent.
+        // When the zoom can no longer afford the pan we hand back to scroll and drop
+        // that frame's zoom step, which by then is worth a few thousandths of a point.
+        const dzWanted = -vz * ZOOM_SPEED;
         const az = Math.abs(vz);
-        anchored = anchored ? az > 0.0015 : az > 0.004;
+        anchored = (anchored ? az > 0.0015 : az > 0.004) &&
+                   (!panning || api.panAuthority(dzWanted) >= Math.hypot(px, py));
         if (anchored) {
           if (!wasAnchored) api.releasePan();   // keep the follow loop off the scroll
           if (zSeen === null) { zSeen = api.zoomPercent(); zGuard = 0; }
-          api.zoomAnchored(-vz * ZOOM_SPEED, panning ? px : 0, panning ? py : 0);
+          api.zoomAnchored(dzWanted, panning ? px : 0, panning ? py : 0);
           // if the wheel path ever stops working, fall back to the native steps
           if (++zGuard === 15 && api.zoomPercent() === zSeen) { api.zoomStep(vz > 0 ? 1 : -1); tvz = vz = 0; }
           paintZoom();
@@ -1509,13 +1599,13 @@
       function motionStart() { if (!motion) motion = w.setInterval(motionTick, 16); }
 
       function movePad(e) {
-        panScale = 1;
         const r = pad.getBoundingClientRect();
-        tvx = Math.max(-1, Math.min(1, (e.clientX - r.left - r.width / 2) / (r.width / 2)));
-        tvy = Math.max(-1, Math.min(1, (e.clientY - r.top - r.height / 2) / (r.height / 2)));
-        setKnob(tvx, tvy);
+        padActive = true;
+        padX = Math.max(-1, Math.min(1, (e.clientX - r.left - r.width / 2) / (r.width / 2)));
+        padY = Math.max(-1, Math.min(1, (e.clientY - r.top - r.height / 2) / (r.height / 2)));
+        applyMotion();
       }
-      const padRelease = () => { tvx = tvy = 0; setKnob(0, 0); };
+      const padRelease = () => { padActive = false; padX = padY = 0; applyMotion(); };
       pad.addEventListener('pointerdown', e => { pad.setPointerCapture(e.pointerId); movePad(e); motionStart(); });
       pad.addEventListener('pointermove', e => { if (e.buttons) movePad(e); });
       pad.addEventListener('pointerup', padRelease);
@@ -1666,7 +1756,7 @@
       const turnLabel = d.getElementById('turn-label');
       w.setInterval(() => {
         const cur = window.__turnCurrent && window.__turnCurrent();
-        turnLabel.textContent = cur ? cur.label : '—';
+        turnLabel.textContent = !cur ? '—' : (cur.label + (cur.sim ? ' · sim' : ''));
       }, 1000);
 
       renderViews(); refreshAliasTargets(); renderAliases();
@@ -1676,17 +1766,29 @@
       const held = new Set();
       const norm = k => (k.length === 1 ? k.toLowerCase() : k);
       function applyKeys() {
-        panScale = KEY_PAN;
-        tvx = (held.has('ArrowRight') ? 1 : 0) - (held.has('ArrowLeft') ? 1 : 0);
-        tvy = (held.has('ArrowDown') ? 1 : 0) - (held.has('ArrowUp') ? 1 : 0);
+        keyX = (held.has('ArrowRight') ? 1 : 0) - (held.has('ArrowLeft') ? 1 : 0);
+        keyY = (held.has('ArrowDown') ? 1 : 0) - (held.has('ArrowUp') ? 1 : 0);
         tvz = (held.has('q') ? 1 : 0) - (held.has('a') ? 1 : 0);
-        setKnob(tvx, tvy);
+        applyMotion();
       }
       // A text field, select or slider owns the keyboard while focused: otherwise
       // typing a view name would fire token shortcuts and zoom.
       const typing = el => !!el && (/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName) || el.isContentEditable);
+      // Cmd+Ctrl shortcuts belong to the userscript, not to the panel, so when the
+      // panel holds focus they never reach the Roll20 document. Replay them there:
+      // same origin, every handler listens on `document`, and none checks isTrusted.
+      d.addEventListener('keydown', e => {
+        if (!(e.metaKey && e.ctrlKey)) return;
+        document.dispatchEvent(new KeyboardEvent('keydown', {
+          key: e.key, code: e.code, bubbles: true, cancelable: true,
+          metaKey: true, ctrlKey: true, shiftKey: e.shiftKey, altKey: e.altKey,
+        }));
+        e.preventDefault();
+      });
       d.addEventListener('keydown', e => {
         if (typing(e.target)) return;
+        // a modified key was just forwarded above: it is not a panel shortcut
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
         if (e.key >= '1' && e.key <= '9') {
           const t = load()[parseInt(e.key, 10) - 1];
           if (t) { api.focusToken(t.id); e.preventDefault(); }
@@ -1752,7 +1854,13 @@
       }
       return { key: isToken ? e0.id : 'custom:' + label, label: label || '(unnamed)', isToken, entry: e0 };
     }
-    const currentEntry = () => entryAt(0);
+    // A dry run cannot write turnorder (it is synced to the server and to everyone
+    // else at the table), so the panel would keep reporting the REAL current turn
+    // while the camera acted on the simulated one. This override makes the whole
+    // chain — label, alias button, camera — agree during a simulation. It clears
+    // itself the moment the tracker really moves, so it can never outlive the test.
+    let simulated = null;
+    const currentEntry = () => simulated || entryAt(0);
     window.__turnCurrent = currentEntry;
 
     function apply(override) {
@@ -1791,17 +1899,20 @@
       timer = setTimeout(() => apply(override), TURN.debounceMs);
     }
 
-    window.Campaign.on('change:turnorder', () => schedule(null));
+    window.Campaign.on('change:turnorder', () => { simulated = null; schedule(null); });
     window.__turnFollowApply = apply;
 
     // DRY RUN: pretend the tracker advanced to entry #i of the REAL turn order.
     // Read-only — never writes Campaign, so nothing is synced to the server or to
     // the other players. Returns the row it will act on (after the debounce).
     window.__turnSimulate = (i) => {
+      if (i == null) { simulated = null; console.log('[Roll20 Custom UI] simulation cleared'); return null; }
       const e = entryAt(i);
       if (!e) { console.warn('[Roll20 Custom UI] no turn-order entry #' + i); return null; }
       console.log('[Roll20 Custom UI] simulate turn #' + i + ' → ' + e.label +
                   (e.isToken ? '' : ' (custom row)'));
+      e.sim = true;
+      simulated = e;
       schedule(e);
       return e;
     };
