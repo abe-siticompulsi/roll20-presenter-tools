@@ -4,7 +4,7 @@
 // @match       https://app.roll20.net/editor/*
 // @icon        data:image/x-icon;base64,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
 // @grant       none
-// @version     4.0
+// @version     4.2
 // @author      abe
 // @require     https://cdn.jsdelivr.net/npm/obs-websocket-js@5/dist/obs-ws.min.js
 // SECURITY: keep the _light build — it omits lottie's expression evaluator (Function), and animation JSON here is untrusted chat-supplied data.
@@ -15,7 +15,7 @@
 (function () {
   'use strict';
 
-  const SCRIPT_VERSION = '4.0';   // keep in sync with @version above
+  const SCRIPT_VERSION = '4.2';   // keep in sync with @version above
 
   // ── CSS ──────────────────────────────────────────────────────────────────
   const css = `
@@ -845,6 +845,25 @@
     let lastMoveT = 0;            // timestamp (ms) of the last detected token movement
     let expScrollL = scroller.scrollLeft, expScrollT = scroller.scrollTop; // scroll "expected" as left by us
     const lastPos = new Map();    // mesh.uniqueId -> {x, y} world position from the previous frame
+    // ── GM PING (Shift+Click) ────────────────────────────────────────────────
+    // The GM's Shift+Click moves everyone's view, landing the pinged point at the
+    // GEOMETRIC centre of the window — so in this view it sits half a safe-area too
+    // low, behind the OBS band. We cannot intercept it before it happens: probed
+    // live, it fires no Campaign event at all, arriving straight from the network
+    // layer to a view handler. So we detect it by its EFFECT instead: Roll20 animates
+    // the jump over ~200-300 ms through the scroll wrapper, which we can read.
+    // Telling it apart from a local hand-drag needs no thresholds — a drag has a
+    // pointer down IN THIS WINDOW, a ping does not.
+    const CFGP = { enabled: true, minJumpPx: 120, settleMs: 180 };
+    window.__pingCfg = CFGP;
+    let pointerDown = false;
+    let pingAcc = 0, pingLastT = 0;
+    document.addEventListener('pointerdown', () => { pointerDown = true; }, true);
+    document.addEventListener('pointerup', () => { pointerDown = false; }, true);
+    document.addEventListener('pointercancel', () => { pointerDown = false; }, true);
+    // A real mouse wheel zooms, which rescales scroll by a lot: not a ping.
+    document.addEventListener('wheel', () => { suppressOverrideUntil = performance.now() + 300; }, true);
+
     let cinema = null;            // {fx, fy, t0, dur}: eased approach to an explicit framing
     let explicitAim = false;      // true when WE aimed the camera, rather than a token moving
 
@@ -934,6 +953,30 @@
 
     // Follow via SCROLL of the native wrapper: map, tokens, fog, darkness and HP bars move together.
     scene.onBeforeRenderObservable.add(() => {
+      // 0) GM PING: scroll we did not cause, with no pointer down here. Our own zooms
+      //    also rescale scroll, so they hold suppressOverrideUntil while they run.
+      //    The jump is animated, so accumulate it and act once it has settled.
+      if (CFGP.enabled && CFG.enabled && !pointerDown && !glideTimer &&
+          performance.now() >= suppressOverrideUntil) {
+        const d = Math.hypot(scroller.scrollLeft - expScrollL, scroller.scrollTop - expScrollT);
+        const now = performance.now();
+        if (d > 0.5) {
+          if (now - pingLastT > CFGP.settleMs) pingAcc = 0;   // a new burst, not the same one
+          pingAcc += d;
+          pingLastT = now;
+        } else if (pingAcc && now - pingLastT > CFGP.settleMs) {
+          const total = pingAcc;
+          pingAcc = 0;
+          if (total >= CFGP.minJumpPx) {
+            // Re-frame the point Roll20 just centred geometrically. focusWorld puts it
+            // on the SAFE centre, with the same easing as any other explicit framing —
+            // and is a no-op when the safe area is hidden, since the two coincide.
+            const w = screenToWorld(canvas.clientWidth / 2, canvas.clientHeight / 2);
+            api.focusWorld(w.x, w.y);
+          }
+        }
+      }
+
       // 1) which token moved the most in this frame?
       let mover = null, best = CFG.moveEpsilon;
       for (const m of selectableTokens()) {
@@ -1445,7 +1488,9 @@
         '<div class="row"><label>' + s.label +
         ' <output id="out-' + s.key + '"></output></div>' +
         '<input type="range" id="sl-' + s.key + '" min="' + s.min + '" max="' + s.max +
-        '" step="' + s.step + '" data-unit="' + s.unit + '"></div>').join('');
+        '" step="' + s.step + '" data-unit="' + s.unit + '"></div>').join('') +
+        '<div class="row" style="gap:6px"><label>GM ping re-centring</label>' +
+        '<button id="btn-ping"></button></div>';
 
       return '<!doctype html><html><head><meta charset="utf-8"><title>Presenter panel</title><style>' +
         'body{margin:0;padding:10px;background:#15161a;color:#e9e9ee;' +
@@ -1541,6 +1586,20 @@
       }
       btnEn.onclick = () => { CFG.enabled = !CFG.enabled; paintEnabled(); };
       paintEnabled();
+
+      // Re-centring the GM's Shift+Click ping onto the safe area. Off means the ping
+      // lands where Roll20 puts it: dead centre, half a safe-area behind the OBS band.
+      const btnPing = d.getElementById('btn-ping');
+      function paintPing() {
+        const c = window.__pingCfg;
+        btnPing.textContent = !c ? 'n/a' : (c.enabled ? 'ON' : 'OFF');
+        btnPing.className = !c ? '' : (c.enabled ? 'on' : 'off');
+      }
+      btnPing.onclick = () => {
+        const c = window.__pingCfg;
+        if (c) { c.enabled = !c.enabled; paintPing(); }
+      };
+      paintPing();
 
       SLIDERS.forEach(s => {
         const el = d.getElementById('sl-' + s.key), out = d.getElementById('out-' + s.key);
